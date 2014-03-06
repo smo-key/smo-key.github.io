@@ -1,10 +1,51 @@
 <style type="text/css">
 
-h1 {font-size: 30px; font-family: source-sans-pro, sans-serif;}
-h2 {font-size: 15px; font-family: courier;}
-p {font-size: 12px; font-family:"times new roman";}
+html,
+button,
+input,
+select,
+textarea {
+    font-family: cantarell, "Source Code Pro", sans-serif;
+    color: #454545;
+}
 
-#topbar{position:absolute;left:0px;top:0px;width:700px;height:40px;background-color:#222222;color:#FFFFFF;}
-.center{text-align:center;}
+@font-face {
+    font-family: "source code pro";
+    src: url(../font/SourceCodePro-Regular.ttf) format("truetype");
+}
+
+body {
+    background: #e7e7e7;
+    font-weight: 100;
+    font-size: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+}
+
+p {
+    line-height: 1.7em;
+    margin: 0 0 1.7em;
+}
+
+a {
+    color: #0380E8;
+    text-decoration: none;
+}
+
+#code {
+    background: #555555;
+    border-radius: 4px;
+    border: 3px solid transparent;
+    word-wrap: normal;
+    color: #fff;
+    display: block;
+    font-family: "Source Code Pro";
+    font-size: 0.8em;
+    line-height: 1.4em;
+    margin: 0px 8px 0px;
+    padding: 0px 4px;
+}
 
 </style>
