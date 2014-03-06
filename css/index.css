@@ -5,17 +5,37 @@ button,
 input,
 select,
 textarea {
-    font-family: cantarell, "Source Code Pro", sans-serif;
+    font-family: "Source Code Pro", sans-serif;
     color: #454545;
 }
 
 @font-face {
-    font-family: "source code pro";
+    font-family: "Source Code Pro";
     src: url(../font/SourceCodePro-Regular.ttf) format("truetype");
 }
 
+@font-face {
+    font-family: "Vladimir Script";
+    src: url(../font/VLADIMIR.TTF) format("truetype");
+}
+
+@font-face {
+    font-family: "Neue LT Pro Bold";
+    src: url(../font/HelveticaNeueLTPro-Bd.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "Neue LT Pro Thin";
+    src: url(../font/HelveticaNeueLTPro-Th.otf) format("opentype");
+}
+
+@font-face {
+    font-family: "Neue LT Pro Light";
+    src: url(../font/HelveticaNeueLTPro-Lt.otf) format("opentype");
+}
+
 body {
-    background: #e7e7e7;
+    background: #F0F0F0;
     font-weight: 100;
     font-size: 1em;
 }
@@ -32,6 +52,88 @@ p {
 a {
     color: #0380E8;
     text-decoration: none;
+}
+
+#title-div {
+    background: #fff;
+    left: 0px;
+    right: 0px;
+    top:0px;
+    height:65px;
+    display:block;
+    position:static;
+    margin: 0px;
+}
+
+title-items-div {
+    background: #fff;
+    right: 36px;
+    top: 20px;
+    position: absolute;
+}
+
+title-line {
+    background-color: #44AEE3;
+    height: 3pt;
+    right: 336px;
+    width: 66px;
+    top: 48px;
+    position: absolute;
+}
+
+title-name {
+    color: #000;
+    font-size: 24pt;
+    font-family: "vladimir script";
+    margin-left: 36px;
+    top: 12.375px;
+    position: absolute;
+}
+
+title-item {
+    font-size: 14pt;
+    position: static;
+    margin-left: 15px;
+}
+
+title-item.normal {
+    color: #444;
+    font-family: "neue lt pro thin";
+}
+
+title-item.hover {
+    color: #000;
+    font-family: "neue lt pro thin";
+}
+
+title-item.selected {
+    color: #000;
+    font-family: "neue lt pro bold";
+}
+
+footer-div {
+    background: inherit;
+    left: 0px;
+    right: 0px;
+    bottom:auto;
+    height:32px;
+    display:block;
+    position: sticky;
+    margin: 0px;
+}
+
+footer-copyright {
+    font-size: 8pt;
+    position: relative;
+    margin-left: 15px;
+    color: #333333;
+    font-family: "neue lt pro light", sans-serif;
+    display: block;
+    left: 0px;
+    right: 0px;
+    top: 10px;
+    bottom: 0px;
+    text-align:center;
 }
 
 #code {
