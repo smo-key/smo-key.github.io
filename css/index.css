@@ -9,6 +9,11 @@ textarea {
     color: #454545;
 }
 
+main {
+    margin-left: 36px;
+    margin-right: 36px;
+}
+
 @font-face {
     font-family: "Source Code Pro";
     src: url(../font/SourceCodePro-Regular.ttf) format("truetype");
@@ -54,7 +59,7 @@ a {
     text-decoration: none;
 }
 
-#title-div {
+title-div {
     background: #fff;
     left: 0px;
     right: 0px;
@@ -65,19 +70,26 @@ a {
     margin: 0px;
 }
 
+.title-div-comp {
+    height: 80px;
+}
+
 title-items-div {
     background: #fff;
-    right: 36px;
     top: 20px;
-    position: absolute;
+    position: fixed;
+}
+
+.title-items-div-comp {
+    top: 50px;
 }
 
 title-line {
     background-color: #44AEE3;
     height: 3pt;
-    right: 336px;
-    width: 66px;
-    top: 48px;
+    right: 310px;
+    width: 68px;
+    top: 26px;
     position: absolute;
 }
 
@@ -85,15 +97,24 @@ title-name {
     color: #000;
     font-size: 24pt;
     font-family: "vladimir script";
-    margin-left: 36px;
     top: 12.375px;
+    margin-left: 30px;
     position: absolute;
+}
+
+.title-name-comp {
+    font-size: 20pt;
+    margin-left: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
 }
 
 title-item {
     font-size: 14pt;
     position: static;
-    margin-left: 15px;
+    margin-left: 8px;
+    margin-right: 8px;
 }
 
 title-item.normal {
@@ -135,6 +156,13 @@ footer-copyright {
     bottom: 0px;
     text-align:center;
 }
+
+/*@media screen and (min-height: 820px)  //height >= 820 px 
+{
+    title-item {
+        margin-left: 10px;
+    }
+}*/
 
 #code {
     background: #555555;
