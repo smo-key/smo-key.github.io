@@ -68,6 +68,7 @@ title-div {
     display:block;
     position:static;
     margin: 0px;
+    cursor: default;
 }
 
 .title-div-comp {
@@ -78,20 +79,23 @@ title-items-div {
     background: #fff;
     top: 20px;
     position: fixed;
+    cursor: default;
 }
 
 .title-items-div-comp {
     top: 50px;
 }
 
+/*
 title-line {
     background-color: #44AEE3;
-    height: 3pt;
+    height: 2pt;
     right: 310px;
     width: 68px;
     top: 26px;
     position: absolute;
 }
+*/
 
 title-name {
     color: #000;
@@ -103,33 +107,50 @@ title-name {
 }
 
 .title-name-comp {
-    font-size: 20pt;
+    font-size: 22pt;
     margin-left: 0;
     left: 0;
     right: 0;
+    top:8px;
     text-align: center;
 }
 
 title-item {
     font-size: 14pt;
     position: static;
-    margin-left: 8px;
-    margin-right: 8px;
+    margin-left: 4px;
+    margin-right: 4px;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+    cursor: default;
+}
+
+.title-item-comp {
+    font-size: 12pt;
 }
 
 title-item.normal {
-    color: #444;
+    color: #888;
     font-family: "neue lt pro thin";
+    border: #fff 4pt solid;
 }
 
-title-item.hover {
+title-item.normal:hover {
     color: #000;
     font-family: "neue lt pro thin";
+    border: #fff 4pt solid;
 }
 
 title-item.selected {
-    color: #000;
-    font-family: "neue lt pro bold";
+    color: #fff;
+    font-family: "neue lt pro thin";
+    background-color: #44AEE3;
+    border: #44AEE3 4pt solid;
+        border-radius: 3pt;
+/*    background-clip: border-box;*/
+/*    background: #44AEE3 solid;*/
+    
 }
 
 footer-div {
@@ -141,6 +162,7 @@ footer-div {
     display:block;
     position: sticky;
     margin: 0px;
+    cursor: default;
 }
 
 footer-copyright {
