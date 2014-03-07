@@ -8,15 +8,16 @@ $(document).ready(function () {
 function updateContainer() {
     var $containerWidth = $(window).width();
     
-    if ($containerWidth <= 680) {
+    if ($containerWidth < 700) {
         $("title-div").addClass("title-div-comp");
         $("title-items-div").addClass("title-items-div-comp");
+        requestAnimFrame(updateContainer);
         var $aWidth = ($containerWidth - $("title-items-div").width())/2;
         $("title-items-div").css("right", $aWidth);
         $("title-item").addClass("title-item-comp");
         $("title-name").addClass("title-name-comp");
     }
-    if ($containerWidth > 681) {
+    if ($containerWidth >= 700) {
         $("title-div").removeClass("title-div-comp");
         $('title-items-div').removeClass("title-items-div-comp");
         $("title-item").removeClass("title-item-comp");
@@ -24,4 +25,14 @@ function updateContainer() {
         $("title-items-div").css("right","36px");
     }
     $('main').html($containerWidth.toString());
+    return;
 }
+
+window.requestAnimFrame = (function(){
+  return  window.requestAnimationFrame       ||
+          window.webkitRequestAnimationFrame ||
+          window.mozRequestAnimationFrame    ||
+          function( callback ){
+            window.setTimeout(callback, 1000 / 60);
+          };
+})();
