@@ -23,8 +23,46 @@ a:hover {
  ************/
 
 .cover {
- padding-top: 40px;
+  padding-top: 40px;
+  display: block;
+  position: fixed;
+  left: 20px;
+  right: 20px;
+  text-align: left;
 }
+
+.cover-heading {
+  font-weight: 900;
+  text-align: center;
+}
+
+.content {
+  position: absolute;
+  z-index: 5000;
+}
+
+.backimg {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom:0;
+  z-index: 1;
+
+  display: block;
+  background-image: url("../img/backtest.jpg");
+  background-origin: 0 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  
+  -webkit-filter: blur(5px) brightness(50%);
+  -moz-filter: blur(5px) brightness(50%);
+  -o-filter: blur(5px) brightness(50%);
+  -ms-filter: blur(5px) brightness(50%);
+  filter: blur(5px) brightness(50%);
+}
+
 .cover .btn-lg {
   padding: 10px 20px;
   font-weight: bold;
@@ -44,14 +82,18 @@ body {
   color: #fff;
   text-align: center;
   text-shadow: 0 1px 3px rgba(0,0,0,.5);
-/*  box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
+  box-shadow: inset 0 0 100px rgba(0,0,0,.5);
+}
+
+.nospace {
+  padding-top: 0px;
 }
 
 .site-wrapper {
   display: table;
   width: 100%;
   height: 100%; /* For at least Firefox */
-  min-height: 1000%;
+  min-height: 700%;  
 }
 .site-wrapper-inner {
   display: static;
@@ -63,7 +105,7 @@ body {
 }
 
 .masthead {
-  background: linear-gradient(to bottom, rgba(51,51,51,1) 0%,rgba(51,51,51,1) 36%,rgba(51,51,51,1) 50%,rgba(51,51,51,0) 100%); /* W3C */
+  background: linear-gradient(to bottom, rgba(51,51,51,1) 0%,rgba(0,0,0,1) 36%,rgba(0,0,0,1) 75%,rgba(0,0,0,0) 100%); /* W3C */
   padding-bottom: 16px;
   position: fixed;
   left: 0px;
@@ -77,6 +119,8 @@ body {
 
 .masthead-nav > li {
   display: inline-block;
+  float: none;
+  height: 20px;
 }
 .masthead-nav > li + li {
   margin-left: 20px;
@@ -88,7 +132,8 @@ body {
   font-weight: bold;
   color: #fff; /* IE8 proofing */
   color: rgba(255,255,255,.75);
-  border-bottom: 2px solid transparent;
+  border-bottom: 3px solid transparent;
+  border-bottom-style: ridge;
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
@@ -100,12 +145,6 @@ body {
 .masthead-nav > .active > a:focus {
   color: #fff;
   border-bottom-color: #fff;
-}
-
-@media (min-width: 768px) {
-  .masthead-nav {
-    float: none;
-  }
 }
 
 .mastfoot {
