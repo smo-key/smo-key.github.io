@@ -1,206 +1,114 @@
-<style type="text/css">
+/***********
+ * GLOBALS *
+ ***********/
+
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+/************
+ * CONTENTS *
+ ************/
+
+.cover {
+ padding-top: 40px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+
+/**************
+ * STRUCTURES *
+ **************/
 
 html,
-button,
-input,
-select,
-textarea {
-    font-family: "Source Code Pro", sans-serif;
-    color: #454545;
-}
-
-main {
-    margin-left: 36px;
-    margin-right: 36px;
-}
-
-@font-face {
-    font-family: "Source Code Pro";
-    src: url(../font/SourceCodePro-Regular.ttf) format("truetype");
-}
-
-@font-face {
-    font-family: "Vladimir Script";
-    src: url(../font/VLADIMIR.TTF) format("truetype");
-}
-
-@font-face {
-    font-family: "Neue LT Pro Bold";
-    src: url(../font/HelveticaNeueLTPro-Bd.otf) format("opentype");
-}
-
-@font-face {
-    font-family: "Neue LT Pro Thin";
-    src: url(../font/HelveticaNeueLTPro-Th.otf) format("opentype");
-}
-
-@font-face {
-    font-family: "Neue LT Pro Light";
-    src: url(../font/HelveticaNeueLTPro-Lt.otf) format("opentype");
-}
-
 body {
-    background: #F0F0F0;
-    font-weight: 100;
-    font-size: 1em;
+  height: 100%;
+  background-color: #333;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+/*  box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: normal;
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 1000%;
+}
+.site-wrapper-inner {
+  display: static;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
 }
 
-p {
-    line-height: 1.7em;
-    margin: 0 0 1.7em;
+.masthead {
+  background: linear-gradient(to bottom, rgba(51,51,51,1) 0%,rgba(51,51,51,1) 36%,rgba(51,51,51,1) 50%,rgba(51,51,51,0) 100%); /* W3C */
+  padding-bottom: 16px;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
 }
 
-a {
-    color: #0380E8;
-    text-decoration: none;
+/**********
+ * Header *
+ **********/
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
 }
 
-title-div {
-    background: #fff;
-    right: 0px;
-    top:0px;
-    height:65px;
-    display:block;
-    position:static;
-    margin: 0px;
-    cursor: default;
+@media (min-width: 768px) {
+  .masthead-nav {
+    float: none;
+  }
 }
 
-title-appbox {
-    
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
 }
-
-.title-div-comp {
-    height: 80px;
-}
-
-title-items-div {
-    background: #fff;
-    top: 20px;
-    position: absolute;
-    cursor: default;
-}
-
-.title-items-div-comp {
-    top: 50px;
-}
-
-/*
-title-line {
-    background-color: #44AEE3;
-    height: 2pt;
-    right: 310px;
-    width: 68px;
-    top: 26px;
-    position: absolute;
-}
-*/
-
-title-name {
-    color: #000;
-    font-size: 24pt;
-    font-family: "vladimir script";
-    top: 12.375px;
-    margin-left: 30px;
-    position: absolute;
-}
-
-.title-name-comp {
-    font-size: 22pt;
-    margin-left: 0;
-    left: 0;
-    right: 0;
-    top:8px;
-    text-align: center;
-}
-
-title-item {
-    font-size: 14pt;
-    position: static;
-    margin-left: 4px;
-    margin-right: 4px;
-    -moz-transition: all .25s ease-in-out;
-    -o-transition: all .25s ease-in-out;
-    -webkit-transition: all .25s ease-in-out;
-    cursor: default;
-}
-
-.title-item-comp {
-    font-size: 12pt;
-}
-
-title-item.normal {
-    color: #888;
-    font-family: "neue lt pro thin";
-    border: #fff 4pt solid;
-}
-
-title-item.normal:hover {
-    color: #000;
-    font-family: "neue lt pro thin";
-    border: #fff 4pt solid;
-}
-
-title-item.selected {
-    color: #fff;
-    font-family: "neue lt pro thin";
-    background-color: #44AEE3;
-    border: #44AEE3 4pt solid;
-        border-radius: 3pt;
-/*    background-clip: border-box;*/
-/*    background: #44AEE3 solid;*/
-    
-}
-
-footer-div {
-    background: inherit;
-    left: 0px;
-    right: 0px;
-    bottom:auto;
-    height:32px;
-    display:block;
-    position: sticky;
-    margin: 0px;
-    cursor: default;
-}
-
-footer-copyright {
-    font-size: 8pt;
-    position: relative;
-    margin-left: 15px;
-    color: #333333;
-    font-family: "neue lt pro light", sans-serif;
-    display: block;
-    left: 0px;
-    right: 0px;
-    top: 10px;
-    bottom: 0px;
-    text-align:center;
-}
-
-/*@media screen and (min-height: 820px)  //height >= 820 px 
-{
-    title-item {
-        margin-left: 10px;
-    }
-}*/
-
-#code {
-    background: #555555;
-    border-radius: 4px;
-    border: 3px solid transparent;
-    word-wrap: normal;
-    color: #fff;
-    display: block;
-    font-family: "Source Code Pro";
-    font-size: 0.8em;
-    line-height: 1.4em;
-    margin: 0px 8px 0px;
-    padding: 0px 4px;
-}
-
-</style>
