@@ -153,7 +153,7 @@ span {
   background-attachment: fixed;
   background-position: center;
   display: block;
-  position: fixed;
+  position: static;
 
 /*  padding-top: 40px;*/
   left: 0px;
@@ -174,25 +174,26 @@ span {
   vertical-align: middle;
   position: relative;
   font-weight: bold;
+  
+  -webkit-filter: blur(0px);
 }
 
 
-
-/***** SLIDE 2: ??? *****/
+/***** SLIDE 2: I'm A *****/
 
 .slide2 {
-  background: rgb(55, 55, 55);
+  background: url("../img/Arthur-Drilling.gif") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   display: block;
-  position: fixed;
+  position: relative;
 
-  padding-top: 40px;
+/*  padding-top: 40px;*/
   left: 0px;
   right: 0px;
   top: 0px;
   bottom: 0px;
   text-align: center;
-  z-index: 1;
+  z-index: 2;
 }
