@@ -59,7 +59,6 @@ h3, .h3 {
 	font-size: 2.4em;
 	line-height: 1.5em;
 	color: #333;
-
 }
 
 /* Custom default button */
@@ -78,10 +77,42 @@ h3, .h3 {
   vertical-align: center;
 }
 
-span { 
-  display:inline-block;
-  vertical-align:middle;
+.slidetext-center
+{
+  padding: 0 20px 0 20px;
+  display: table-cell;   
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  font-weight: bold;
 }
+
+.slidetext-static
+{
+  padding: 5px 20px 5px 20px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: top;
+  position: relative;
+  font-weight: bold;
+}
+
+.slidetext-top
+{
+  padding: 0 20px 0 20px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: top;
+  position: relative;
+  font-weight: bold;
+}
+
+.inverse-text {
+  color: #fff;
+}
+
+/* TODO: Freeze slide2 after it hits the bottom and pop slide3 as ptially opaque */
+
 
 /************
  * CONTENTS *
@@ -164,27 +195,6 @@ span {
   vertical-align: middle;
 }
 
-
-.slidetext-center
-{
-  padding: 0 20px 0 20px;
-  display: table-cell;   
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  font-weight: bold;
-}
-
-.slidetext-static
-{
-  padding: 5px 20px 5px 20px;
-  display: table-cell;
-  text-align: center;
-  vertical-align: top;
-  position: relative;
-  font-weight: bold;
-}
-
 .outer {
   padding: 10px 0 10px 0;
   display: block;
@@ -211,10 +221,26 @@ span {
   z-index: 3;
 }
 
-/***** SLIDE 3:  *****/
+/***** SLIDE 3: I've Done *****/
 
 .slide3 {
   background: #000;
+  display: block;
+  position: static;
+
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  text-align: center;
+  z-index: 2;
+  vertical-align: middle;
+}
+
+/***** SLIDE 4: I've Worked With *****/
+
+.slide4 {
+  background: #ccc;
   display: block;
   position: static;
 
