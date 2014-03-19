@@ -10,6 +10,7 @@ function updateContainer() {
   var $cH = $(window).height();
   $(".slidetext-center").css('height',$cH);
   $(".slidetext-center").css('width',$cW);
+  $(".slidetext-static").css('width',$cW);
   //$(document).add(alert("Hello World 2!"));
 }
 

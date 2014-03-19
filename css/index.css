@@ -155,7 +155,6 @@ span {
   display: block;
   position: static;
 
-/*  padding-top: 40px;*/
   left: 0px;
   right: 0px;
   top: 0px;
@@ -168,14 +167,29 @@ span {
 
 .slidetext-center
 {
-  padding: 0 0 0 0;
+  padding: 0 20px 0 20px;
   display: table-cell;   
   text-align: center;
   vertical-align: middle;
   position: relative;
   font-weight: bold;
-  
-  -webkit-filter: blur(0px);
+}
+
+.slidetext-static
+{
+  padding: 5px 20px 5px 20px;
+  display: table-cell;
+  text-align: center;
+  vertical-align: top;
+  position: relative;
+  font-weight: bold;
+}
+
+.outer {
+  padding: 10px 0 10px 0;
+  display: block;
+  vertical-align: middle;
+  position: static;
 }
 
 
@@ -184,16 +198,31 @@ span {
 .slide2 {
   background: url("../img/Arthur-Drilling.gif") no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-position: center;
   display: block;
   position: relative;
 
-/*  padding-top: 40px;*/
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  text-align: center;
+  z-index: 3;
+}
+
+/***** SLIDE 3:  *****/
+
+.slide3 {
+  background: #000;
+  display: block;
+  position: static;
+
   left: 0px;
   right: 0px;
   top: 0px;
   bottom: 0px;
   text-align: center;
   z-index: 2;
+  vertical-align: middle;
 }
