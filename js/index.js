@@ -6,10 +6,10 @@ $(document).ready(function () {
 });
 
 function updateContainer() {
-  //var $containerWidth = $(window).width();
-  var $containerHeight = $(window).height();
-  var $aloc = ($containerHeight - $("slide1-text").width())/2;
-  $("slide1-text").css("top",$aloc);
+  var $cW = $(window).width();
+  var $cH = $(window).height();
+  $(".slidetext-center").css('height',$cH);
+  $(".slidetext-center").css('width',$cW);
   //$(document).add(alert("Hello World 2!"));
 }
 
