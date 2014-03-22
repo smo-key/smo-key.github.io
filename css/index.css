@@ -112,7 +112,12 @@ h3, .h3 {
   color: #ccc;
 }
 
-/* TODO: Freeze slide2 after it hits the bottom and pop slide3 as ptially opaque */
+.outer {
+  padding: 10px 0 10px 0;
+  display: block;
+  vertical-align: middle;
+  position: static;
+}
 
 
 /************
@@ -195,14 +200,6 @@ h3, .h3 {
   z-index: 1;
   vertical-align: middle;
 }
-
-.outer {
-  padding: 10px 0 10px 0;
-  display: block;
-  vertical-align: middle;
-  position: static;
-}
-
 
 /***** SLIDE 2: I'm A *****/
 
