@@ -182,73 +182,32 @@ h3, .h3 {
   border-bottom-color: #fff;
 }
 
-/***** SLIDE 1: Meet AP *****/
-
-.slide1 {
-  background: url("../img/CA-olwp1.jpg") no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  display: block;
-  position: static;
-
+.slide {
   left: 0px;
   right: 0px;
   top: 0px;
   bottom: 0px;
   text-align: center;
-  z-index: 1;
   vertical-align: middle;
 }
 
-/***** SLIDE 2: I'm A *****/
-
-.slide2 {
-  background: url("../img/Arthur-Drilling.gif") no-repeat;
-  background-size: cover;
-  background-attachment: scroll;
-  background-position: center;
-  display: block;
-  position: relative;
-
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  text-align: center;
-  z-index: 3;
+.static-img {
+  background-size: cover!important;
+  background-attachment: fixed!important;
+  background-position: center!important;
+  display: block!important;
+  position: static!important;
 }
 
-/***** SLIDE 3: I've Done *****/
-
-.slide3 {
-  background: url("../img/CA-olwp5.jpg") no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  background-position: center;
-  display: block;
-
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  text-align: center;
-  z-index: 2;
-  vertical-align: middle;
+.dynamic-img {
+  background-size: cover!important;
+  background-attachment: scroll!important;
+  background-position: center!important;
+  display: block!important;
+  position: relative!important;
 }
 
-/***** SLIDE 4: Resume *****/
-
-.slide4 {
-  background: #000;
-  display: block;
-  position: static;
-
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  text-align: center;
-  z-index: 2;
-  vertical-align: middle;
+.color-img {
+  display: block!important;
+  position: static!important;
 }
