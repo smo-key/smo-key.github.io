@@ -80,7 +80,7 @@ h3, .h3 {
 
 .slidetext-center
 {
-  padding: 0 20px 0 20px;
+  padding: 0 0px 0 0px;
   display: table-cell;   
   text-align: center;
   vertical-align: middle;
@@ -88,28 +88,34 @@ h3, .h3 {
   font-weight: bold;
 }
 
-.slidetext-static
+.slidetext-content 
 {
-  padding: 5px 20px 5px 20px;
-  display: table-cell;
+  padding: 20px 20px 20px 20px;
+  display: block;   
   text-align: center;
-  vertical-align: top;
+  vertical-align: middle;
   position: relative;
   font-weight: bold;
+  background-color: rgba(0,0,0,0.7);
 }
 
-.slidetext-top
+.slidetext-static
 {
-  padding: 0 20px 0 20px;
+  padding: 20px 20px 20px 20px;
   display: table-cell;
   text-align: center;
   vertical-align: top;
   position: relative;
   font-weight: bold;
+  background-color: rgba(0,0,0,0.7);
 }
 
 #copyright {
   color: #ccc;
+}
+
+#credits {
+  color: #777;
 }
 
 .outer {
@@ -197,6 +203,7 @@ h3, .h3 {
   background-size: cover!important;
   background-attachment: fixed!important;
   background-position: center!important;
+  background-repeat: no-repeat!important;
   display: block!important;
   position: static!important;
 }
@@ -205,6 +212,7 @@ h3, .h3 {
   background-size: cover!important;
   background-attachment: scroll!important;
   background-position: center!important;
+  background-repeat: no-repeat!important;
   display: block!important;
   position: relative!important;
 }
