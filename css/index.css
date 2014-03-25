@@ -88,6 +88,16 @@ h3, .h3 {
   border: 1px solid #fff;
 }
 
+.page-back {
+  background: fixed url('../img/excellence.jpg') center no-repeat;
+  background-size: cover!important;
+  background-attachment: fixed!important;
+  background-position: center!important;
+  background-repeat: no-repeat!important;
+  display: block!important;
+  position: static!important;
+}
+
 .cover-heading {
   font-weight: 900;
   text-align: center;
