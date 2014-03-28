@@ -78,6 +78,14 @@ h3, .h3 {
 	color: #fff;
 }
 
+h4 {
+  line-height: 0.5em;
+}
+
+h5 {
+  line-height: 0;
+}
+
 /* Custom default button */
 .btn-default,
 .btn-default:hover,
@@ -173,6 +181,16 @@ h3, .h3 {
   margin-left: auto;
 }
 
+.icon-gmail {
+  color: #d44937!important;
+  display: inline-block;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+.icon-gmail:hover {
+  color: #ad3e2f;
+}
+
 /***** HEADER *****/
 
 .header {
@@ -183,6 +201,15 @@ h3, .h3 {
   right: 0px;
   top: 0px;
   z-index: 9999;
+}
+
+.footer {
+  background: #222;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 9998;
 }
 
 .header-nav > li {
@@ -228,7 +255,6 @@ h3, .h3 {
 .static-img {
   background-size: cover!important;
   background-attachment: fixed!important;
-  background-position: center!important;
   background-repeat: no-repeat!important;
   display: block!important;
   position: static!important;
@@ -246,4 +272,11 @@ h3, .h3 {
 .color-img {
   display: block!important;
   position: static!important;
+}
+
+.img-center {
+    background-position: center!important;
+}
+.img-bottom {
+    background-position: bottom!important;
 }
