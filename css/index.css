@@ -277,6 +277,44 @@ h5 {
 .img-center {
     background-position: center!important;
 }
+
 .img-bottom {
     background-position: bottom!important;
+}
+
+/***** MEDIA QUERIES *****/
+
+@media screen and (max-width: 700px){
+  
+  .static-img {
+    background-size: cover!important;
+    background-attachment: scroll!important;
+    background-position: center!important;
+    background-repeat: no-repeat!important;
+    display: block!important;
+    position: relative!important;
+  }
+
+  h1, .h1 {
+      font-size: 3.5em;
+      line-height: 1.15em;
+      color: #fff;
+  }
+
+  h2, .h2 {
+      font-size: 3em;
+      line-height: 1.2em;
+      color: #fff;
+      text-align: center;
+  }
+
+  h3, .h3 {
+      font-family: serif;
+      font-weight: lighter;
+      font-style: oblique;
+      font-size: 1em;
+      line-height: 1.5em;
+      color: #fff;
+  }
+  
 }
