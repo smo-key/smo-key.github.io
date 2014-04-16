@@ -15,15 +15,16 @@ function updateContainer() {
   var $cW = $(window).width();
   var $cH = $(window).height();
   if ($cH < 400) { $cH = 400; }
-  $(".slidetext-center").css('height',$cH);
+  var $stH = $cH;
+  if (($cW < 700) && ($cH > 400)) { $stH = 400; }
+  $(".slidetext-center").css('height',$stH);
   $(".slidetext-center").css('width',$cW);
   $(".slidetext-static").css('width',$cW);
-  $(".slidetext-top").css('height',$cH);
+  $(".slidetext-top").css('height',$stH);
   $(".slidetext-top").css('width',$cW);
   var $s4H = $cW / 4 - 20;
   $(".slide4-item").css('height',$s4H);
   $(".slide4-item").css('padding-top',"0");
-  //$(document).add(alert("Hello World 2!"));
 }
 
 window.requestAnimFrame = (function(){
