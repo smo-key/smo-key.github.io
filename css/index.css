@@ -70,10 +70,7 @@ h2, .h2 {
 }
 
 h3, .h3 {
-	font-family: serif;
-	font-weight: lighter;
-    font-style: oblique;
-	font-size: 2em;
+	font-size: 2.6em;
 	line-height: 1.5em;
 	color: #fff;
 }
@@ -181,21 +178,33 @@ h5 {
   margin-left: auto;
 }
 
-.icon-gmail {
-  color: #d44937!important;
+.contact-img {
   display: inline-block;
+  background-size: cover;
+  background-repeat: no-repeat;
   margin-top: 0px;
   margin-bottom: 0px;
+  margin-left: 2px;
+  margin-right: 2px;
 }
-.icon-gmail:hover {
-  color: #ad3e2f;
+
+.contact-img-gmail {
+  width: 44px;
+  height: 32px;
+  background-image: url('../img/gmail.png');
+}
+
+.contact-img-github {
+  width: 120px;
+  height: 32px;
+  background-image: url('../img/github.png');
 }
 
 /***** HEADER *****/
 
 .header {
   background: linear-gradient(to bottom, rgba(0,0,0,1) 0%,rgba(0,0,0,1) 36%,rgba(0,0,0,1) 75%,rgba(0,0,0,0) 100%);
-  padding-bottom: 16px;
+  padding-bottom: 24px;
   position: fixed;
   left: 0px;
   right: 0px;
@@ -296,25 +305,32 @@ h5 {
   }
 
   h1, .h1 {
-      font-size: 3.5em;
-      line-height: 1.15em;
-      color: #fff;
+    font-size: 3.5em;
+    line-height: 1.15em;
+    color: #fff;
   }
 
   h2, .h2 {
-      font-size: 3em;
-      line-height: 1.2em;
-      color: #fff;
-      text-align: center;
+    font-size: 3em;
+    line-height: 1.2em;
+    color: #fff;
+    text-align: center;
   }
 
   h3, .h3 {
-      font-family: serif;
-      font-weight: lighter;
-      font-style: oblique;
-      font-size: 1em;
-      line-height: 1.5em;
-      color: #fff;
+    font-size: 1.5em;
+	line-height: 1.5em;
+	color: #fff;
+  }
+  
+  .contact-img-gmail {
+    width: 28px;
+    height: 20px;
+  }
+
+  .contact-img-github {
+    width: 76px;
+    height: 20px;
   }
   
 }
