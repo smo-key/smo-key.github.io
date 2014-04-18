@@ -1,7 +1,16 @@
 Arthur Pachachura's Personal Website
 =======
 
-This website was created in HTML, CSS, JavaScript, jQuery, and Bootstrap!  Isn't that neat?
+This website was created using HTML, CSS, JavaScript, jQuery, and Bootstrap!
 
-=======
-Licensed under MIT, see LICENSE.txt
+Features
+---
+- Easy to write slide-based layout
+- Fast load times with minified / compressed assets
+- Fully mobile compatible
+
+
+---------
+Licensed under MIT License, see LICENSE.txt
+
+Arthur Pachachura (smo-key)
