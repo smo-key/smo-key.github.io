@@ -362,17 +362,15 @@
   "css": [
     "print.less",
     "type.less",
+    "buttons.less",
     "glyphicons.less",
+    "button-groups.less",
     "navs.less",
     "component-animations.less",
     "utilities.less",
     "responsive-utilities.less"
   ],
   "js": [
-    "button.js",
-    "affix.js",
-    "collapse.js",
-    "scrollspy.js",
     "transition.js"
   ]
 }
