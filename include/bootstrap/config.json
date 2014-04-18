@@ -360,17 +360,12 @@
     "@component-offset-horizontal": "180px"
   },
   "css": [
-    "print.less",
     "type.less",
     "buttons.less",
-    "glyphicons.less",
     "button-groups.less",
     "navs.less",
-    "component-animations.less",
     "utilities.less",
     "responsive-utilities.less"
   ],
-  "js": [
-    "transition.js"
-  ]
+  "js": []
 }
