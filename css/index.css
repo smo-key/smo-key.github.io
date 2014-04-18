@@ -2,39 +2,6 @@
  * GLOBALS *
  ***********/
 
-html,
-body {
-  height: 100%;
-  background-color: #222;
-}
-body {
-  color: #fff;
-  text-align: center;
-  text-shadow: 0 1px 3px rgba(0,0,0,.5);
-  overflow-y: scroll;
-  overflow: -moz-scrollbars-vertical;
-/*  box-shadow: inset 0 0 100px rgba(0,0,0,.5);*/
-}
-
-::-webkit-scrollbar{
-  width:16px;
-  visibility: hidden;
-  z-index: -999;
-}
-
-::-webkit-scrollbar-thumb{
-   background-color: rgb(103, 103, 103);
-}
-::-webkit-scrollbar-thumb:hover {
-   background-color: rgb(200, 200, 200);
-}
-
-
-body {
-	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	font-size: 1em;
-}
-
 p {
 	font-family: 'Skolar', Georgia, serif;
 	font-size: 1.5em;
@@ -83,62 +50,13 @@ h5 {
   line-height: 0;
 }
 
-/* Custom default button */
 .btn-default,
 .btn-default:hover,
 .btn-default:focus {
   color: #333;
-  text-shadow: none; /* Prevent inheritence from `body` */
+  text-shadow: none;
   background-color: #fff;
   border: 1px solid #fff;
-}
-
-.page-back {
-  background: fixed url('../img/excellence.jpg') center no-repeat;
-  background-size: cover!important;
-  background-attachment: fixed!important;
-  background-position: center!important;
-  background-repeat: no-repeat!important;
-  display: block!important;
-  position: static!important;
-}
-
-.cover-heading {
-  font-weight: 900;
-  text-align: center;
-  vertical-align: center;
-}
-
-.slidetext-center
-{
-  padding: 0 0px 0 0px;
-  display: table-cell;   
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  font-weight: bold;
-}
-
-.slidetext-content 
-{
-  padding: 20px 20px 20px 20px;
-  display: block;   
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  font-weight: bold;
-  background-color: rgba(0,0,0,0.25);
-}
-
-.slidetext-static
-{
-  padding: 20px 20px 20px 20px;
-  display: table-cell;
-  text-align: center;
-  vertical-align: top;
-  position: relative;
-  font-weight: bold;
-  background-color: rgba(0,0,0,0.25);
 }
 
 #copyright {
@@ -160,23 +78,6 @@ h5 {
 /************
  * CONTENTS *
  ************/
-
-/***** WRAPPERS *****/
-
-.site-wrapper {
-  display: table;
-  width: 100%;
-  height: 100%;
-/*  min-height: 700%;  */
-}
-.site-wrapper-inner {
-  display: static;
-  vertical-align: top;
-}
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
 
 .contact-img {
   display: inline-block;
@@ -212,15 +113,6 @@ h5 {
   z-index: 9999;
 }
 
-.footer {
-  background: #222;
-  position: fixed;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  z-index: 9998;
-}
-
 .header-nav > li {
   display: inline-block;
   float: none;
@@ -248,47 +140,6 @@ h5 {
 .header-nav > .active > a:focus {
   color: #fff;
   border-bottom-color: #fff;
-}
-
-/***** SLIDES *****/
-
-.slide {
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-.static-img {
-  background-size: cover!important;
-  background-attachment: fixed!important;
-  background-repeat: no-repeat!important;
-  display: block!important;
-  position: static!important;
-}
-
-.dynamic-img {
-  background-size: cover!important;
-  background-attachment: scroll!important;
-  background-position: center!important;
-  background-repeat: no-repeat!important;
-  display: block!important;
-  position: relative!important;
-}
-
-.color-img {
-  display: block!important;
-  position: static!important;
-}
-
-.img-center {
-    background-position: center!important;
-}
-
-.img-bottom {
-    background-position: bottom!important;
 }
 
 /***** MEDIA QUERIES *****/
