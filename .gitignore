@@ -1,6 +1,3 @@
-#InDesign lock
-*.idlk
-
 img/possible/*
 img/plausible/*
 design/*
