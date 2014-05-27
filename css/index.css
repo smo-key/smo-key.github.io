@@ -2,6 +2,21 @@
  * GLOBALS *
  ***********/
 
+html,
+body {
+  height: 100%;
+  background-color: #222;
+}
+body {
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  overflow-y: scroll;
+  overflow: -moz-scrollbars-vertical;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 1em;
+}
+
 p {
 	font-family: 'Skolar', Georgia, serif;
 	font-size: 1.5em;
