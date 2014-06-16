@@ -1,205 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Arthur Pachachura</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="author" content="Arthur Pachachura">
     <meta name="ROBOTS" content="INDEX, FOLLOW">
     <meta name="Keywords" content="Pachachura,Arthur,smo-key,github">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Meet Arthur Pachachura - I'm a future computer and electrical engineer attending LASA HS in Austin, Texas">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta charset="utf-8">
-    <!---INCLUDE FILES--->
-    <link href="include/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<!--    <link rel="shortcut icon" href="assets/img/favicon.png">-->
+    <title>Arthur Pachachura</title>
+
+    <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom Styles -->
+    <link href="assets/css/main.css" rel="stylesheet">
+    <!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+    <!-- IE8 Compat -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    
     <!---CRITICAL CSS--->
     <style>
-      html,
-      body {
-        height: 100%;
-        background-color: #222;
-      }
-      body {
-        color: #fff;
-        text-align: center;
-        text-shadow: 0 1px 3px rgba(0,0,0,.5);
-        overflow-y: scroll;
-        overflow: -moz-scrollbars-vertical;
-      	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	    font-size: 1em;
-      }
-      ::-webkit-scrollbar{
-        width:16px;
-        visibility: hidden;
-        z-index: -999;
-      }
-      
-      .site-wrapper {
-        display: table;
-        width: 100%;
-        height: 100%;
-        min-height: 100%;
-      }
-      .site-wrapper-inner {
-        display: static;
-        vertical-align: top;
-      }
-      .cover-container {
-        margin-right: auto;
-        margin-left: auto;
-      }
-      
-      .slidetext-center
-      {
-        padding: 0 0px 0 0px;
-        display: table-cell;   
-        text-align: center;
-        vertical-align: middle;
-        position: relative;
-        font-weight: bold;
-      }
-      .slidetext-content 
-      {
-        padding: 20px 20px 20px 20px;
-        display: block;   
-        text-align: center;
-        vertical-align: middle;
-        position: relative;
-        font-weight: bold;
-        background-color: rgba(0,0,0,0.25);
-      }
-      .slidetext-static
-      {
-        padding: 20px 20px 20px 20px;
-        display: table-cell;
-        text-align: center;
-        vertical-align: top;
-        position: relative;
-        font-weight: bold;
-        background-color: rgba(0,0,0,0.25);
-      }
-      
-      .slide {
-        left: 0px;
-        right: 0px;
-        top: 0px;
-        bottom: 0px;
-        text-align: center;
-        vertical-align: middle;
-      }
-      .static-img {
-        background-size: cover!important;
-        background-attachment: fixed!important;
-        background-repeat: no-repeat!important;
-        display: block!important;
-        position: static!important;
-      }
-      .dynamic-img {
-        background-size: cover!important;
-        background-attachment: scroll!important;
-        background-position: center!important;
-        background-repeat: no-repeat!important;
-        display: block!important;
-        position: relative!important;
-      }
-      .color-img {
-        display: block!important;
-        position: static!important;
-      }
-      .img-center {
-          background-position: center!important;
-      }
-      .img-bottom {
-          background-position: bottom!important;
-      }
       
     </style>
   </head>
-    
+
+  <!--CONTENT-->
   <body>
-
-    <div class="site-wrapper">
-
-      <div class="site-wrapper-inner">
-
-        <div class="cover-container">
-            
-          <!--HEADER-->
-          <div class="header clearfix content">
-            <ul class="nav header-nav">
-              <li class="active"><a href="#">Profile</a></li>
-<!--              <li><a href="">Projects</a></li>-->
-<!--              <li><a href="contact">Contact</a></li>-->
-<!--              <li><a href="#">Blog</a></li>-->
-            </ul>
-          </div>
-          
-          <!--Meet AP-->
-          <div class="slide static-img img-center" style="z-index: 1; background: url('../img/excellence.jpg');">
-            <div class="slidetext-center">
-              <div class="slidetext-content h1">
-              Meet<br><big>Arthur Pachachura</big>
-              </div>
-            </div>
-          </div>
-
-          <!--I'm A-->
-          <div class="slide dynamic-img img-center" style="z-index: 3; background: url('../img/drilling.png');">
-            <div class="slidetext-center">
-              <div class="slidetext-content h1">I'm a future computer and electrical engineer attending LASA HS in Austin, Texas.
-              </div>
-            </div>
-          </div>
-        </div>
-          
-        <!--LASA and Scouts-->
-        <div class="slide static-img img-center" style="z-index: 2; background: url('../img/lifescout.jpg');">
-          <div class="outer" style="padding:60px 0 60px 0;"></div>
-          <div class="slidetext-static h2">I am the programming lead for the award-winning LASA Robotics team and a Scout Instructor in Troop 448.</div>
-          <div class="outer" style="padding:60px 0 60px 0;"></div>
-        </div>
-
-        <!--Volunteer-->
-        <div class="slide dynamic-img img-center" style="z-index: 2; background: url('../img/training.jpg');">
-          <div class="outer" style="padding:60px 0 60px 0;"></div>
-          <div class="slidetext-static h2">I've volunteered at the FIRST Robotics World Championship as Field Control System Operator and Robot Inspector.</div>
-          <div class="outer" style="padding:60px 0 60px 0;"></div>
-        </div>
-
-        <!--Work With-->
-        <div class="slide static-img img-center" style="z-index: 2; background: url('../img/teammeeting.jpg');">
-          <div class="outer" style="padding:60px 0 60px 0;"></div>
-          <div class="slidetext-static h2">I've worked with C, C++, C#, Visual Basic, HTML, CSS, JavaScript, and jQuery on both Linux and Windows systems.</div>
-          <div class="outer" style="padding:60px 0 60px 0;"></div>
-        </div>
-
-        <!--Download Resume-->
-        <div class="slide color-img" style="z-index: 2; background: #000;">
-          <div class="outer" style="padding:10px 0 10px 0;"></div>
-          <div class="slidetext-static h2">Need more info?</div>
-          <div class="outer"></div>
-          <button type="button" onclick="location.href='files/resume.pdf';" class="btn btn-default btn-lg">
-            <span>Download Resume</span>
-          </button>
-          <div class="outer" style="padding:20px 0 20px 0;"></div>
-        </div>
-        
-        <!--Contact-->
-        <div class="slide color-img" style="z-index: 1; background: #222;">
-          <div class="outer" style="padding:10px 0 10px 0;"></div>
-          <h3><b>Find me on <a class="contact-img contact-img-github"  href="https://github.com/smo-key"></a> or send me a 
-            <a class="contact-img contact-img-gmail" href="mailto:pachachura.arthur@gmail.com"></a></b></h3>
-          <div class="outer"></div>
-        </div>
-
-        <!--Copyright-->
-        <h6 id="copyright">Copyright © YEAR Arthur Pachachura</h6>
-        
-        <!--Image Credits-->
-        <h6 id="credits">Images four and five courtesy of Gerry Cocco.</h6>
-          
-        </div>
+    
+    <!-- Primary Slide -->
+    <div id="bigslide">
+      <div class="row mt centered">
+        <h1 id="bigtext">Meet<br>Arthur Pachachura</h1>
       </div>
+    </div><!-- /bigslide -->
+    <div class="col-lg-4" id="bigcircle">
+            <img class="img-circle" src="assets/img/profilearthur.png" width="140" alt="">
     </div>
+    
+    <!-- jQuery -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
 
@@ -212,7 +60,3 @@ ga('create', 'UA-49465037-1', 'smo-key.github.io');
 ga('require', 'linkid', 'linkid.js');
 ga('send', 'pageview');
 </script>
-
-<link href="css/index.css" rel="stylesheet" type="text/css"/>
-<script src="include/jquery.min.js"></script>
-<script src="js/main.js"></script>
