@@ -17,6 +17,11 @@
     <link href="assets/css/main.css" rel="stylesheet">
     <!-- Google Fonts -->
 	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'>
+    <!-- IE8 Compat -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
     
     <!---CRITICAL CSS--->
     <style>
@@ -26,9 +31,23 @@
 
   <!--CONTENT-->
   <body>
-
-      
-      
+    
+    <!-- Primary Slide -->
+    <div id="bigslide">
+      <div class="row mt centered">
+        <h1 id="bigtext">Meet<br>Arthur Pachachura</h1>
+      </div>
+    </div><!-- /bigslide -->
+    <div class="col-lg-4" id="bigcircle">
+            <img class="img-circle" src="assets/img/profilearthur.png" width="140" alt="">
+    </div>
+    
+    <!-- jQuery -->
+    <script src="assets/js/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
 
@@ -41,8 +60,3 @@ ga('create', 'UA-49465037-1', 'smo-key.github.io');
 ga('require', 'linkid', 'linkid.js');
 ga('send', 'pageview');
 </script>
-
-<!-- jQuery -->
-<script src="assets/js/jquery.min.js"></script>
-<!-- Custom JS -->
-<script src="assets/js/main.js"></script>
