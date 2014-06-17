@@ -1,88 +1,88 @@
 body {
   background-color: #f2f2f2;
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    color: #555;
-    min-height: 2000px;
-    
-    -moz-font-smoothing: antialiased;
-    -webkit-font-smoothing: antialiased;
-    -webkit-overflow-scrolling: touch;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+  min-height: 2000px;
+
+  -moz-font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -webkit-overflow-scrolling: touch;
 }
 
 /* Titles */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    color: #333;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  color: #333;
 }
 
 h1 {
-	font-size: 40px;
+  font-size: 40px;
 }
 
 h2 {
-    font-size: 26px;
+  font-size: 26px;
 }
 
 h3 {
-	color: #95a5a6;
-	font-weight: 400;
+  color: #95a5a6;
+  font-weight: 400;
 }
 
 h4 {
-	color: #95a5a6;
-	font-weight: 400;
-	font-size: 20px;
+  color: #95a5a6;
+  font-weight: 400;
+  font-size: 20px;
 }
 
 /* Paragraph */
 p {
-    line-height: 28px;
-    margin-bottom: 25px;
-    font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 25px;
+  font-size: 16px;
 }
 
 .centered {
-    text-align: center;
+  text-align: center;
 }
 
 /* Links */
 a {
-    color: #669900;
-    word-wrap: break-word;
+  color: #669900;
+  word-wrap: break-word;
 
-    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-    transition: color 0.1s ease-in, background 0.1s ease-in;
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
 a:hover,
 a:focus {
-    color: #99cc00;
-    text-decoration: none;
-    outline: 0;
+  color: #99cc00;
+  text-decoration: none;
+  outline: 0;
 }
 
 a:before,
 a:after {
-    -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-    -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-    transition: color 0.1s ease-in, background 0.1s ease-in;
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
 }
 
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 /* Header */
@@ -157,40 +157,40 @@ hr {
 /* Helpers */
 
 .mt {
-	margin-top: 40px;
-	margin-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .form-control {
-	height: 42px;
-	font-size: 18px;
-	width: 280px;
+  height: 42px;
+  font-size: 18px;
+  width: 280px;
 }
 
 i {
-	margin: 8px;
-	color: #3498db; 
+  margin: 8px;
+  color: #3498db; 
 }
 
 /* SPECIFIC CONTROLS */
 
 /* Hero */
 #profile {
-	/* background: url(../img/bg01.jpg) no-repeat center top; */
-	background: url('../img/possible/Alaska Vacation May 2009 101.jpg');
-    background-size: cover;
-    display: block;
-	padding-top: 100px;
-	background-attachment: scroll;
-	background-position: center center;
-	width: 100%;
-    z-index: 1;
-  
-    -webkit-filter: blur(0px);
-    -moz-filter: blur(0px);
-    -ms-filter: blur(0px);
-    -o-filter: blur(0px);
-    filter: blur(0px);
+  /* background: url(../img/bg01.jpg) no-repeat center top; */
+  background: url('../img/possible/Alaska Vacation May 2009 101.jpg');
+  background-size: cover;
+  display: block;
+  padding-top: 100px;
+  background-attachment: scroll;
+  background-position: center center;
+  width: 100%;
+  z-index: 1;
+
+  -webkit-filter: blur(0px);
+  -moz-filter: blur(0px);
+  -ms-filter: blur(0px);
+  -o-filter: blur(0px);
+  filter: blur(0px);
 }
 
 #headercontainer {}
@@ -210,7 +210,7 @@ i {
   border-width: 4px;
   border-color: rgba(242, 242, 242,0.25);
   border-style: solid;
-  width: 48px;
+  width: 64px;
   position: fixed;
   top: 0px;
   left: 4px;
@@ -220,7 +220,7 @@ i {
   opacity: 0;
   text-align: left;
   top: 6px;
-  left: 60px;
+  left: 76px;
   position: fixed;
   color: #777;
   font-size: 24px;
@@ -246,14 +246,14 @@ i {
 }
 
 #herotext {
-    margin-bottom: 60px;
-	color: white;
-	font-size: 60px;
-	font-weight: 300;
-	letter-spacing: 1px;
-    text-align: center;
-    width: 100%;
-    display: inline-block;
+  margin-bottom: 60px;
+  color: white;
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
 }
 
 #herocircle {
@@ -270,4 +270,43 @@ i {
   border-style: solid;
   border-radius: 50%;
   width: 140px;
+}
+
+/* MEDIA QUERIES */
+@media screen and (max-width: 520px){
+    
+  .header-nav > li + li {
+    margin-left: 2px;
+  }
+
+  .header-nav > li > a {
+    height: 36px;
+    width: 24px;
+    padding-left: 4px;
+    font-size: 16px;
+  }
+  
+  #headeravatartext {
+    font-size: 16px;
+    left: 56px;
+  }
+  
+  #headeravatar {
+    width: 48px;
+  }
+  
+  #herotext {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  
+  #herocircle {
+    top: -45px;
+  }
+  
+  #heropic {
+    width: 90px;
+    border-width: 3px;
+  }
+  
 }

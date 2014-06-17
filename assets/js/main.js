@@ -20,7 +20,8 @@ function firstLoad()
 }
 
 function updateResize() {
-  
+//  var cW = $(window).width();
+//  var cH = $(window).height();
 }
 
 function smoothscroll() {
