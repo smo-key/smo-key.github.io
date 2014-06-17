@@ -284,6 +284,19 @@ i {
   transition: opacity 0.25s ease-in-out;
 }
 
+/* Carousel */
+
+.carouselitem {
+  max-height: 500px;
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#carousel-iam {
+  margin-top: -60px;
+}
+
 
 
 /****** MEDIA QUERIES ******/
