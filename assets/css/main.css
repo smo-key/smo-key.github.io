@@ -4,6 +4,7 @@ body {
     font-weight: 300;
     font-size: 16px;
     color: #555;
+    min-height: 2000px;
     
     -moz-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
@@ -88,7 +89,7 @@ hr {
 
 .header {
   background-color: rgba(242, 242, 242, 0.0);
-  padding-bottom: 24px;
+  padding-bottom: 7px;
   position: fixed;
   left: 0px;
   right: 0px;
@@ -102,12 +103,15 @@ hr {
   float: none;
   height: 20px;
 }
+
 .header-nav > li + li {
   margin-left: 6px;
 }
+
 .header-nav > li > a {
   height: 48px;
   width: 32px;
+  margin-top: -6px;
   padding-right: 0;
   padding-left: 0;
   font-size: 24px;
@@ -115,6 +119,7 @@ hr {
   color: #95a5a6; /* IE8 proofing */
   border-bottom: 2px solid transparent;
 }
+
 .header-nav > li > a:hover,
 .header-nav > li > a:focus {
   color: #777; /* IE8 proofing */
@@ -126,6 +131,7 @@ hr {
   -o-transition: color 0.1s ease-in, background 0.1s ease-in;
   transition: color 0.1s ease-in, background 0.1s ease-in;
 }
+
 .header-nav > .active > a,
 .header-nav > .active > a:hover,
 .header-nav > .active > a:focus {
@@ -133,6 +139,7 @@ hr {
   border-bottom-color: #000;
 }
 
+/*
 .navbar-default {
 	background-color: rgba(242, 242, 242, 0.7);
 	border-color: transparent;
@@ -145,6 +152,7 @@ hr {
 .navbar-default .navbar-nav > li > a {
 	color: black;
 }
+*/
 
 /* Helpers */
 
@@ -176,8 +184,13 @@ i {
 	background-attachment: scroll;
 	background-position: center center;
 	width: 100%;
-    -webkit-filter: blur(0px);
     z-index: 1;
+  
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -ms-filter: blur(0px);
+    -o-filter: blur(0px);
+    filter: blur(0px);
 }
 
 #herotext {
