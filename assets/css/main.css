@@ -4,7 +4,6 @@ body {
     font-weight: 300;
     font-size: 16px;
     color: #555;
-    min-height: 2000px;
     
     -moz-font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
@@ -85,17 +84,66 @@ hr {
     padding: 0;
 }
 
+/* Header */
+
+.header {
+  background-color: rgba(242, 242, 242, 0.0);
+  padding-bottom: 24px;
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  color: #000;
+  z-index: 9999;
+}
+
+.header-nav > li {
+  display: inline-block;
+  float: none;
+  height: 20px;
+}
+.header-nav > li + li {
+  margin-left: 6px;
+}
+.header-nav > li > a {
+  height: 48px;
+  width: 32px;
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: #95a5a6; /* IE8 proofing */
+  border-bottom: 2px solid transparent;
+}
+.header-nav > li > a:hover,
+.header-nav > li > a:focus {
+  color: #777; /* IE8 proofing */
+  background-color: transparent;
+  border-bottom-color: rgba(119, 119, 119, 0.75);
+  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
+  transition: color 0.1s ease-in, background 0.1s ease-in;
+}
+.header-nav > .active > a,
+.header-nav > .active > a:hover,
+.header-nav > .active > a:focus {
+  color: #000;
+  border-bottom-color: #000;
+}
+
 .navbar-default {
-	background-color: #669900;
+	background-color: rgba(242, 242, 242, 0.7);
 	border-color: transparent;
 }
 
 .navbar-default .navbar-brand {
-	color: white;
+	color: black;
 }
 
 .navbar-default .navbar-nav > li > a {
-	color: white;
+	color: black;
 }
 
 /* Helpers */
@@ -124,11 +172,9 @@ i {
 	background: url('../img/possible/Alaska Vacation May 2009 101.jpg');
     background-size: cover;
     display: block;
-	margin-top: 0px;
-	padding-top:200px;
+	padding-top: 100px;
 	background-attachment: scroll;
 	background-position: center center;
-	min-height: 260px;
 	width: 100%;
     -webkit-filter: blur(0px);
     z-index: 1;
@@ -151,11 +197,12 @@ i {
   position: relative;
   display: block;
   width: 100%;
-  z-index: 9999;
+  z-index: 2;
 }
 #heropic {
-  border-width: 3px;
-  border-color: #fff;
+  border-width: 4px;
+  border-color: #f2f2f2;
   border-style: solid;
   border-radius: 50%;
+  width: 140px;
 }
