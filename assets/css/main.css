@@ -118,29 +118,44 @@ i {
 
 /* SPECIFIC CONTROLS */
 
-/* BigSlide */
-#bigslide {
+/* Hero */
+#heroslide {
 	/* background: url(../img/bg01.jpg) no-repeat center top; */
-	background: url('../img/excellence.jpg');
+	background: url('../img/possible/Alaska Vacation May 2009 101.jpg');
     background-size: cover;
+    display: block;
 	margin-top: 0px;
 	padding-top:200px;
 	background-attachment: scroll;
 	background-position: center center;
-	min-height: 400px;
+	min-height: 260px;
 	width: 100%;
+    -webkit-filter: blur(0px);
+    z-index: 1;
 }
 
-#bigtext {
-	margin-top: -60px;
+#herotext {
+    margin-bottom: 60px;
 	color: white;
 	font-size: 60px;
 	font-weight: 300;
 	letter-spacing: 1px;
     text-align: center;
+    width: 100%;
+    display: inline-block;
 }
 
-#bigcircle {
-  margin-top: -110px;
+#herocircle {
+  top: -70px;
   text-align: center;
+  position: relative;
+  display: block;
+  width: 100%;
+  z-index: 9999;
+}
+#heropic {
+  border-width: 3px;
+  border-color: #fff;
+  border-style: solid;
+  border-radius: 50%;
 }
