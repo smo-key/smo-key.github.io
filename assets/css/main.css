@@ -90,7 +90,7 @@ hr {
 .header {
   background-color: rgba(242, 242, 242, 0.0);
   padding-bottom: 7px;
-  position: fixed;
+  position: absolute;
   left: 0px;
   right: 0px;
   top: 0px;
@@ -101,7 +101,6 @@ hr {
 .header-nav > li {
   display: inline-block;
   float: none;
-  height: 20px;
 }
 
 .header-nav > li + li {
@@ -112,17 +111,16 @@ hr {
   height: 48px;
   width: 32px;
   margin-top: -6px;
-  padding-right: 0;
-  padding-left: 0;
+  padding-left: 4px;
   font-size: 24px;
   font-weight: bold;
-  color: #95a5a6; /* IE8 proofing */
+  color: #95a5a6;
   border-bottom: 2px solid transparent;
 }
 
 .header-nav > li > a:hover,
 .header-nav > li > a:focus {
-  color: #777; /* IE8 proofing */
+  color: #777;
   background-color: transparent;
   border-bottom-color: rgba(119, 119, 119, 0.75);
   -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
@@ -193,13 +191,56 @@ i {
     filter: blur(0px);
 }
 
-#herocontainer {}
+#headercontainer {}
 
-.herocontainerlesser {
-    text-align: center;
+.headerlesser {
+  text-align: center;
+  position: absolute;
 }
-.herocontainergreater {
-    text-align: right;
+.headergreater {
+  text-align: right;
+  position: fixed;
+}
+
+#headeravatar {
+  opacity: 0;
+  text-align: center;
+  border-width: 4px;
+  border-color: rgba(242, 242, 242,0.25);
+  border-style: solid;
+  width: 48px;
+  position: fixed;
+  top: 0px;
+  left: 4px;
+  z-index: 9999;
+}
+#headeravatartext {
+  opacity: 0;
+  text-align: left;
+  top: 6px;
+  left: 60px;
+  position: fixed;
+  color: #777;
+  font-size: 24px;
+  font-weight: 100;
+  z-index:99999;
+}
+
+.headeravataractive {
+  opacity: 1!important;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  -moz-transition: opacity 0.25s ease-in-out;
+  -o-transition: opacity 0.25s ease-in-out;
+  -ms-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+.herozero {
+  opacity: 0;
+  -webkit-transition: opacity 0.1s ease-in-out;
+  -moz-transition: opacity 0.1s ease-in-out;
+  -o-transition: opacity 0.1s ease-in-out;
+  -ms-transition: opacity 0.1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
 }
 
 #herotext {

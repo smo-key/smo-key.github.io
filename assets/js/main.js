@@ -15,10 +15,10 @@ function firstLoad()
 
 function updateScroll() {
   var s = $(document).scrollTop();
-  $(".header").css("background-color","rgba(242, 242, 242, " + (coerce(s,0,70)/100).toString() + ")");
-  $("#heroslide").css("-webkit-filter","blur(" + (coerce((s - 25)*2.5,0,750)/100).toString() + "px)");
-  if (s > $("#heroslide").innerHeight()) {$("#herocontainer").removeClass("herocontainerlesser").addClass("herocontainergreater");}
-  else {$("#herocontainer").removeClass("herocontainergreater").addClass("herocontainerlesser");}
+  $(".header").css("background-color","rgba(242, 242, 242, " + (coerce(s - 50,0,70)/100).toString() + ")");
+  $("#heroslide").css("-webkit-filter","blur(" + (coerce((s - 40)*2.5,0,750)/100).toString() + "px)");
+  if (s > $("#heroslide").innerHeight() + 16) {$("#headercontainer").removeClass("headerlesser").addClass("headergreater"); $("#headeravatar").addClass("headeravataractive"); $("#heropic").addClass("herozero"); $("#headeravatartext").addClass("headeravataractive"); }
+  else {$("#headercontainer").removeClass("headergreater").addClass("headerlesser"); $("#headeravatar").removeClass("headeravataractive"); $("#heropic").removeClass("herozero"); $("#headeravatartext").removeClass("headeravataractive");}
 }
 
 function coerce(int, min, max) {
