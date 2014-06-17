@@ -1,11 +1,6 @@
 $(document).ready(function () {
   firstLoad();
-  updateContainer();
   updateScroll();
-  
-  $(window).resize(function() {
-    updateContainer();
-  });
   
   $(window).scroll(function() {
      updateScroll();
@@ -20,13 +15,10 @@ function firstLoad()
 
 function updateScroll() {
   var s = $(document).scrollTop();
-  $(".header").css("background-color","rgba(242, 242, 242, " + (coerce(s*2,0,70)/100).toString() + ")");
-  $("#heroslide").css("-webkit-filter","blur(" + (coerce((s - 25)*2.5,0,500)/100).toString() + "px)");
-}
-
-function updateContainer() {
-//  var $cW = $(window).width();
-//  var $cH = $(window).height();
+  $(".header").css("background-color","rgba(242, 242, 242, " + (coerce(s,0,70)/100).toString() + ")");
+  $("#heroslide").css("-webkit-filter","blur(" + (coerce((s - 25)*2.5,0,750)/100).toString() + "px)");
+  if (s > $("#heroslide").innerHeight()) {$("#herocontainer").removeClass("herocontainerlesser").addClass("herocontainergreater");}
+  else {$("#herocontainer").removeClass("herocontainergreater").addClass("herocontainerlesser");}
 }
 
 function coerce(int, min, max) {

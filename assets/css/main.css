@@ -193,6 +193,15 @@ i {
     filter: blur(0px);
 }
 
+#herocontainer {}
+
+.herocontainerlesser {
+    text-align: center;
+}
+.herocontainergreater {
+    text-align: right;
+}
+
 #herotext {
     margin-bottom: 60px;
 	color: white;
