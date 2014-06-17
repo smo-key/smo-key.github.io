@@ -90,6 +90,8 @@ hr {
 .header {
   background-color: rgba(242, 242, 242, 0.0);
   padding-bottom: 7px;
+  padding-right: 6px;
+  padding-left: 6px;
   position: absolute;
   left: 0px;
   right: 0px;
@@ -173,7 +175,7 @@ i {
 /* SPECIFIC CONTROLS */
 
 /* Hero */
-#heroslide {
+#profile {
 	/* background: url(../img/bg01.jpg) no-repeat center top; */
 	background: url('../img/possible/Alaska Vacation May 2009 101.jpg');
     background-size: cover;
