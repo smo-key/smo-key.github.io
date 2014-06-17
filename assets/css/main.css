@@ -256,7 +256,7 @@ i {
   border-width: 4px;
   border-color: transparent;
   border-style: solid;
-  width: 64px;
+  width: 48px;
   position: fixed;
   top: 0px;
   left: 4px;
@@ -267,7 +267,7 @@ i {
   opacity: 0;
   text-align: left;
   top: 6px;
-  left: 76px;
+  left: 60px;
   position: fixed;
   color: #777;
   font-size: 24px;
@@ -302,11 +302,11 @@ i {
   
   #headeravatartext {
     font-size: 16px;
-    left: 56px;
+    left: 46px;
   }
   
   #headeravatar {
-    width: 48px;
+    width: 36px;
   }
   
   #herotext {
