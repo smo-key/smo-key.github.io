@@ -1,10 +1,11 @@
 body {
-  background-color: #f2f2f2;
+  background-color: #111;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
   font-size: 16px;
   color: #555;
   min-height: 2000px;
+  display: static;
 
   -moz-font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
@@ -117,7 +118,9 @@ hr {
   font-size: 24px;
   font-weight: bold;
   color: #aaa;
-  border-bottom: 2px solid transparent;
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(119, 119, 119, 0);
 }
 
 .header-nav > li > a:hover,
@@ -125,11 +128,11 @@ hr {
   color: #777;
   background-color: transparent;
   border-bottom-color: rgba(119, 119, 119, 0.75);
-  -webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -moz-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -ms-transition: color 0.1s ease-in, background 0.1s ease-in;
-  -o-transition: color 0.1s ease-in, background 0.1s ease-in;
-  transition: color 0.1s ease-in, background 0.1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  -moz-transition: all 0.1s ease-in;
+  -ms-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }
 
 .header-nav > .active > a,
@@ -177,20 +180,41 @@ i {
 /* Hero */
 #profile {
   /* background: url(../img/bg01.jpg) no-repeat center top; */
-  background: url('../img/possible/Alaska Vacation May 2009 101.jpg');
-  background-size: cover;
   display: block;
   padding-top: 100px;
+  width: 100%;
+  z-index: 9;
+  margin-bottom: -140px;
+  border-bottom: 3px solid #f2f2f2;
+}
+
+.internalimg {
+  width: 100%;
+  background-size: cover;
+  background-attachment: scroll;
+  background-position: center center;
+  display: block;
+  position: absolute;
+  z-index: -1;
+}
+
+.slide {
+  /* background: url(../img/bg01.jpg) no-repeat center top; */
+  background-size: cover;
+  display: block;
   background-attachment: scroll;
   background-position: center center;
   width: 100%;
-  z-index: 1;
-
-  -webkit-filter: blur(0px);
-  -moz-filter: blur(0px);
-  -ms-filter: blur(0px);
-  -o-filter: blur(0px);
-  filter: blur(0px);
+  z-index: 8;
+  position: static;
+  margin-bottom: 80px;
+}
+.slidetext-center
+{
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
 }
 
 .herozero {
@@ -213,8 +237,17 @@ i {
   display: inline-block;
 }
 
+#slidetext {
+  color: white;
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-align: center;
+  width: 100%;
+  display: inline-block;
+}
+
 #herocircle {
-  top: -70px;
+  top: 65px;
   text-align: center;
   position: relative;
   display: block;
@@ -229,6 +262,14 @@ i {
   width: 140px;
 }
 
+#img02 {
+  -webkit-filter: brightness(0.5);
+  -moz-filter: opacity 0.1s ease-in-out;
+  -o-filter: opacity 0.1s ease-in-out;
+  -ms-filter: opacity 0.1s ease-in-out;
+  filter: opacity 0.1s ease-in-out;
+}
+
 /* Header */
 
 #headercontainer {}
@@ -240,14 +281,11 @@ i {
 }
 
 .headergreater {
+  display: none;
+  padding-top: 60px;
   text-align: right;
-  position: fixed;
-  background-color: rgba(242, 242, 242, 0.8)!important;
-  -webkit-transition: background-color 0.25s ease-in-out;
-  -moz-transition: background-color 0.25s ease-in-out;
-  -o-transition: background-color 0.25s ease-in-out;
-  -ms-transition: background-color 0.25s ease-in-out;
-  transition: background-color 0.25s ease-in-out;
+  position: static;
+  background-color: rgba(242, 242, 242, 0.9)!important;
 }
 
 #headeravatar {
@@ -291,10 +329,12 @@ i {
   width: auto;
   margin-left: auto;
   margin-right: auto;
+  background-size: cover;
 }
 
 #carousel-iam {
   margin-top: -60px;
+  width: 100%;
 }
 
 
@@ -328,7 +368,7 @@ i {
   }
   
   #herocircle {
-    top: -45px;
+    top: 45px;
   }
   
   #heropic {
@@ -336,4 +376,8 @@ i {
     border-width: 3px;
   }
   
+  #profile {
+    margin-bottom: -90px;
+  }
+
 }

@@ -20,8 +20,8 @@ function firstLoad()
 }
 
 function updateResize() {
-//  var cW = $(window).width();
-//  var cH = $(window).height();
+  var $cW = $(window).width();
+  var $cH = $(window).height();
 }
 
 function smoothscroll() {
@@ -44,9 +44,9 @@ function smoothscroll() {
 function updateScroll() {
   var s = $(document).scrollTop();
   $(".header").css("background-color","rgba(242, 242, 242, " + (coerce(s - 50,0,70)/100).toString() + ")");
-  $("#profile").css("-webkit-filter","blur(" + (coerce((s - 40)*2.5,0,750)/100).toString() + "px)");
-  if (s > $("#profile").innerHeight() + 16) {$("#headercontainer").removeClass("headerlesser").addClass("headergreater"); $("#headeravatar").addClass("headeravataractive"); $("#heropic").addClass("herozero"); $("#headeravatartext").addClass("headeravataractive"); }
-  else {$("#headercontainer").removeClass("headergreater").addClass("headerlesser"); $("#headeravatar").removeClass("headeravataractive"); $("#heropic").removeClass("herozero"); $("#headeravatartext").removeClass("headeravataractive");}
+  $("#img01").css("-webkit-filter","blur(" + (coerce((s - 40)*7.5,0,750)/100).toString() + "px) contrast(" + (coerce((s - 40)*-0.5 + 100,50,100)/100).toString() + ")");
+  if (s > $("#profile").innerHeight()) { $("#headeravatar").addClass("headeravataractive");$("#headeravatartext").addClass("headeravataractive"); }
+  else { $("#headeravatar").removeClass("headeravataractive");$("#headeravatartext").removeClass("headeravataractive");}
 }
 
 function coerce(int, min, max) {
