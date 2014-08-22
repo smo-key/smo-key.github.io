@@ -201,9 +201,8 @@
 			
 			.image.avatar48
 			{
-				width: 48px;
-				height: 48px;
-				background: #f00;
+				width: 58px;
+				height: 58px;
 			}
 			
 				.image.avatar48 img
@@ -329,7 +328,7 @@
 				-moz-transition: all 0.35s ease-in-out;
 				-webkit-transition: all 0.35s ease-in-out;
 				-o-transition: all 0.35s ease-in-out;
-				-ms-transition: all 0.35s ease-in-out;
+				-ms-transition: all 0input[type="button"], input[type="submit"], input[type="reset"], .button.35s ease-in-out;
 				transition: all 0.35s ease-in-out;
 			}
 
@@ -432,6 +431,13 @@
 				{
 				}
 
+    /* Title */
+    
+    #title {
+      text-align: center;
+    }
+
+
 	/* Button */
 		
 		input[type="button"],
@@ -439,42 +445,85 @@
 		input[type="reset"],
 		.button
 		{
-			position: relative;
-			display: inline-block;
-			border-radius: 0.35em;
-			color: #fff !important;
-			text-decoration: none;
-			padding: 0.75em 2.5em 0.75em 2.5em;
-			background-color: #8ebebc;
-			border: 0;
-			cursor: pointer;
-			background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url('images/overlay.png');
-			background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url('images/overlay.png');
-			background-image: -o-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url('images/overlay.png');
-			background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url('images/overlay.png');
-			background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.15)), url('images/overlay.png');			
-			-moz-transition: background-color 0.35s ease-in-out;
-			-webkit-transition: background-color 0.35s ease-in-out;
-			-o-transition: background-color 0.35s ease-in-out;
-			-ms-transition: background-color 0.35s ease-in-out;
-			transition: background-color 0.35s ease-in-out;
+          -webkit-appearance: none;
+          position: relative;
+          display: inline-block;
+          background: #3d3d3d;
+          padding: 0.85em 3em 0.85em 3em;
+          border-radius: 0.25em;
+          cursor: pointer;
+          border: 0;
+          color: #fff;
+          text-align: center;
+          text-decoration: none;
+          -moz-transition: all 0.25s ease-in-out;
+          -webkit-transition: all 0.25s ease-in-out;
+          -o-transition: all 0.25s ease-in-out;
+          -ms-transition: all 0.25s ease-in-out;
+          transition: all 0.25s ease-in-out;
 		}
 
-			input[type="button"]:hover,
-			input[type="submit"]:hover,
-			input[type="reset"]:hover,
-			.button:hover
-			{
-				background-color: #9ececc;
-			}
+        input[type="button"]:hover,
+        input[type="submit"]:hover,
+        input[type="reset"]:hover,
+        .button:hover
+        {
+          background: #4f4f4f;
+        }
 			
-			input[type="button"]:active,
-			input[type="submit"]:active,
-			input[type="reset"]:active,
-			.button:active
-			{
-				background-color: #7eaeac;
-			}
+		input[type="button"].alt,
+		input[type="submit"].alt,
+		input[type="reset"].alt,
+		.button.alt
+		{
+          color: inherit;
+          box-shadow: inset 0 0 0 1px #e6e6e6;
+          background: none;
+		}
+		
+        input[type="button"].alt:hover,
+        input[type="submit"].alt:hover,
+        input[type="reset"].alt:hover,
+        .button.alt:hover
+        {
+          background: rgba(0,0,0,0.025);
+        }
+
+        .dark input[type="button"],
+        .dark input[type="submit"],
+        .dark input[type="reset"],
+        .dark .button
+        {
+          background: rgba(255,255,255,0.15);
+          box-shadow: inset 0 0 0 1px #fff;
+          color: #fff;
+        }
+
+        .dark input[type="button"]:hover,
+        .dark input[type="submit"]:hover,
+        .dark input[type="reset"]:hover,
+        .dark .button:hover
+        {
+          background: rgba(255,255,255,0.25);
+        }
+
+        .dark input[type="button"].alt,
+        .dark input[type="submit"].alt,
+        .dark input[type="reset"].alt,
+        .dark .button.alt
+        {
+          background: none;
+          box-shadow: inset 0 0 0 1px rgba(255,255,255,0.5);
+        }
+
+        .dark input[type="button"].alt:hover,
+        .dark input[type="submit"].alt:hover,
+        .dark input[type="reset"].alt:hover,
+        .dark .button.alt:hover
+        {
+          background: rgba(255,255,255,0.15);
+          box-shadow: inset 0 0 0 1px #fff;
+        }
 		
 	/* Item */
 	
@@ -578,36 +627,44 @@
 
 	#logo
 	{
-		position: relative;
-		margin: 1.75em 1.5em 1.5em 1.5em;
-		min-height: 48px;
-		cursor: default;
+      position: relative;
+      margin: 1.75em 1.5em 1.5em 1.5em;
+      min-height: 48px;
+      cursor: default;
+      text-align: center;
 	}
 	
 		#logo h1
 		{
-			position: relative;
-			color: #fff;
-			font-weight: 600;
-			font-size: 1em;
-			line-height: 1em;
+          position: relative;
+          color: #fff;
+          font-weight: 600;
+          font-size: 1em;
+          line-height: 1em;
+          text-align:center;
 		}
 	
 		#logo p
 		{
-			position: relative;
-			display: block;
-			font-size: 0.6em;
-			color: rgba(255,255,255,0.5);
-			line-height: 1.25em;
-			margin: 0.5em 0 0 0;
+          position: relative;
+          display: block;
+          font-size: 0.6em;
+          color: rgba(255,255,255,0.5);
+          line-height: 1.25em;
+          margin: 0.5em 0 0 0;
+          text-align:center;
 		}
 		
 		#logo .image
 		{
-			position: absolute;
-			left: 0;
-			top: 0;
+          position: relative;
+          left: 0;
+          top: 0;
+          text-align: center;
+          border-radius: 50%;
+          background-repeat: no-repeat;
+          background-size: contain;
+          border: 1px solid rgba(100, 100, 100, 1);
 		}
 	
 	#nav
