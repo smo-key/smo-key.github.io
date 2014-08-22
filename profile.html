@@ -7,203 +7,228 @@
     <meta name="ROBOTS" content="INDEX, FOLLOW">
     <meta name="Keywords" content="Pachachura,Arthur,smo-key,github">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Meet Arthur Pachachura - I'm a future computer and electrical engineer attending LASA HS in Austin, Texas">
+    <meta name="description" content="I'm a future computer and electrical engineer attending LASA HS in Austin, Texas">
     <meta charset="utf-8">
     <!---INCLUDE FILES--->
     <script type="text/javascript" src="http://code.arthurpachachura.com/assets/links-main.js"></script>
-    <link href="include/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-    <!---CRITICAL CSS--->
-    <style>
-      html,
-      body {
-        height: 100%;
-        background-color: #222;
-      }
-      body {
-        color: #fff;
-        text-align: center;
-        text-shadow: 0 1px 3px rgba(0,0,0,.5);
-        overflow-y: scroll;
-        overflow: -moz-scrollbars-vertical;
-      	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	    font-size: 1em;
-      }
-      ::-webkit-scrollbar{
-        width:16px;
-        visibility: hidden;
-        z-index: -999;
-      }
-      
-      .site-wrapper {
-        display: table;
-        width: 100%;
-        height: 100%;
-        min-height: 100%;
-      }
-      .site-wrapper-inner {
-        display: static;
-        vertical-align: top;
-      }
-      .cover-container {
-        margin-right: auto;
-        margin-left: auto;
-      }
-      
-      .slidetext-center
-      {
-        padding: 0 0px 0 0px;
-        display: table-cell;   
-        text-align: center;
-        vertical-align: middle;
-        position: relative;
-        font-weight: bold;
-      }
-      .slidetext-content 
-      {
-        padding: 20px 20px 20px 20px;
-        display: block;   
-        text-align: center;
-        vertical-align: middle;
-        position: relative;
-        font-weight: bold;
-        background-color: rgba(0,0,0,0.25);
-      }
-      .slidetext-static
-      {
-        padding: 20px 20px 20px 20px;
-        display: table-cell;
-        text-align: center;
-        vertical-align: top;
-        position: relative;
-        font-weight: bold;
-        background-color: rgba(0,0,0,0.25);
-      }
-      
-      .slide {
-        left: 0px;
-        right: 0px;
-        top: 0px;
-        bottom: 0px;
-        text-align: center;
-        vertical-align: middle;
-      }
-      .static-img {
-        background-size: cover!important;
-        background-attachment: fixed!important;
-        background-repeat: no-repeat!important;
-        display: block!important;
-        position: static!important;
-      }
-      .dynamic-img {
-        background-size: cover!important;
-        background-attachment: scroll!important;
-        background-position: center!important;
-        background-repeat: no-repeat!important;
-        display: block!important;
-        position: relative!important;
-      }
-      .color-img {
-        display: block!important;
-        position: static!important;
-      }
-      .img-center {
-          background-position: center!important;
-      }
-      .img-bottom {
-          background-position: bottom!important;
-      }
-      
-    </style>
+<!--    <link href="include/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>-->
+    
+    <script src="include/jquery.min.js"></script>
+    <script src="include/jquery.scrolly.min.js"></script>
+    <script src="include/jquery.scrollzer.min.js"></script>
+    <script src="include/skel.min.js"></script>
+    <script src="include/skel-layers.min.js"></script>
+    <link rel="stylesheet" href="fonts/fonts.css" />
+    <script src="js/init.js"></script>
+    <noscript>
+      <link rel="stylesheet" href="css/skel.css" />
+      <link rel="stylesheet" href="css/style.css" />
+      <link rel="stylesheet" href="css/style-wide.css" />
+    </noscript>
   </head>
     
   <body>
 
-    <div class="site-wrapper">
+    <!-- Header -->
+    <div id="header" class="skel-layers-fixed">
 
-      <div class="site-wrapper-inner">
+        <div class="top">
 
-        <div class="cover-container">
-            
-          <!--HEADER-->
-          <div class="header clearfix content">
-            <ul class="nav header-nav">
-              <li class="active"><a href="#">Profile</a></li>
-<!--              <li><a href="">Projects</a></li>-->
-<!--              <li><a href="contact">Contact</a></li>-->
-<!--              <li><a href="#">Blog</a></li>-->
+            <!-- Logo -->
+                <div id="logo">
+                    <span class="image avatar48"><img src="img/avatar.jpg" alt="" /></span>
+                    <h1 id="title">Arthur Pachachura</h1>
+<!--                    <p>Austin, Texas</p>-->
+                </div>
+
+            <!-- Nav -->
+                <nav id="nav">
+                    <!--
+
+                        Prologue's nav expects links in one of two formats:
+
+                        1. Hash link (scrolls to a different section within the page)
+
+                           <li><a href="#foobar" id="foobar-link" class="icon fa-whatever-icon-you-want skel-layers-ignoreHref"><span class="label">Foobar</span></a></li>
+
+                        2. Standard link (sends the user to another page/site)
+
+                           <li><a href="http://foobar.tld" id="foobar-link" class="icon fa-whatever-icon-you-want"><span class="label">Foobar</span></a></li>
+
+                    -->
+                    <ul>
+                        <li><a href="#top" id="top-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Intro</span></a></li>
+                        <li><a href="#portfolio" id="portfolio-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Portfolio</span></a></li>
+                        <li><a href="#about" id="about-link" class="skel-layers-ignoreHref"><span class="icon fa-user">About Me</span></a></li>
+                        <li><a href="#contact" id="contact-link" class="skel-layers-ignoreHref"><span class="icon fa-envelope">Contact</span></a></li>
+                    </ul>
+                </nav>
+
+        </div>
+
+        <div class="bottom">
+
+            <!-- Social Icons -->
+                <ul class="icons">
+                    <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                    <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                    <li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+                    <li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+                    <li><a href="#" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                </ul>
+
+        </div>
+
+    </div>
+
+<!-- Main -->
+    <div id="main">
+
+        <!-- Intro -->
+            <section id="top" class="one dark cover">
+                <div class="container">
+
+                    <header>
+                        <h2 class="alt">Hi! I'm <strong>Prologue</strong>, a <a href="http://html5up.net/license">free</a> responsive<br />
+                        site template designed by <a href="http://html5up.net">HTML5 UP</a>.</h2>
+                        <p>Ligula scelerisque justo sem accumsan diam quis<br />
+                        vitae natoque dictum sollicitudin elementum.</p>
+                    </header>
+
+                    <footer>
+                        <a href="#portfolio" class="button scrolly">Magna Aliquam</a>
+                    </footer>
+
+                </div>
+            </section>
+
+        <!-- Portfolio -->
+            <section id="portfolio" class="two">
+                <div class="container">
+
+                    <header>
+                        <h2>Portfolio</h2>
+                    </header>
+
+                    <p>Vitae natoque dictum etiam semper magnis enim feugiat convallis convallis
+                    egestas rhoncus ridiculus in quis risus amet curabitur tempor orci penatibus.
+                    Tellus erat mauris ipsum fermentum etiam vivamus eget. Nunc nibh morbi quis 
+                    fusce hendrerit lacus ridiculus.</p>
+
+                    <div class="row">
+                        <div class="4u">
+                            <article class="item">
+                                <a href="#" class="image fit"><img src="img/pic02.jpg" alt="" /></a>
+                                <header>
+                                    <h3>Ipsum Feugiat</h3>
+                                </header>
+                            </article>
+                            <article class="item">
+                                <a href="#" class="image fit"><img src="img/pic03.jpg" alt="" /></a>
+                                <header>
+                                    <h3>Rhoncus Semper</h3>
+                                </header>
+                            </article>
+                        </div>
+                        <div class="4u">
+                            <article class="item">
+                                <a href="#" class="image fit"><img src="img/pic04.jpg" alt="" /></a>
+                                <header>
+                                    <h3>Magna Nullam</h3>
+                                </header>
+                            </article>
+                            <article class="item">
+                                <a href="#" class="image fit"><img src="img/pic05.jpg" alt="" /></a>
+                                <header>
+                                    <h3>Natoque Vitae</h3>
+                                </header>
+                            </article>
+                        </div>
+                        <div class="4u">
+                            <article class="item">
+                                <a href="#" class="image fit"><img src="img/pic06.jpg" alt="" /></a>
+                                <header>
+                                    <h3>Dolor Penatibus</h3>
+                                </header>
+                            </article>
+                            <article class="item">
+                                <a href="#" class="image fit"><img src="img/pic07.jpg" alt="" /></a>
+                                <header>
+                                    <h3>Orci Convallis</h3>
+                                </header>
+                            </article>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        <!-- About Me -->
+            <section id="about" class="three">
+                <div class="container">
+
+                    <header>
+                        <h2>About Me</h2>
+                    </header>
+
+                    <a href="#" class="image featured"><img src="img/pic08.jpg" alt="" /></a>
+
+                    <p>Tincidunt eu elit diam magnis pretium accumsan etiam id urna. Ridiculus 
+                    ultricies curae quis et rhoncus velit. Lobortis elementum aliquet nec vitae 
+                    laoreet eget cubilia quam non etiam odio tincidunt montes. Elementum sem 
+                    parturient nulla quam placerat viverra mauris non cum elit tempus ullamcorper 
+                    dolor. Libero rutrum ut lacinia donec curae mus vel quisque sociis nec 
+                    ornare iaculis.</p>
+
+                </div>
+            </section>
+
+        <!-- Contact -->
+            <section id="contact" class="four">
+                <div class="container">
+
+                    <header>
+                        <h2>Contact</h2>
+                    </header>
+
+                    <p>Elementum sem parturient nulla quam placerat viverra 
+                    mauris non cum elit tempus ullamcorper dolor. Libero rutrum ut lacinia 
+                    donec curae mus. Eleifend id porttitor ac ultricies lobortis sem nunc 
+                    orci ridiculus faucibus a consectetur. Porttitor curae mauris urna mi dolor.</p>
+
+                    <form method="post" action="#">
+                        <div class="row half">
+                            <div class="6u"><input type="text" name="name" placeholder="Name" /></div>
+                            <div class="6u"><input type="text" name="email" placeholder="Email" /></div>
+                        </div>
+                        <div class="row half">
+                            <div class="12u">
+                                <textarea name="message" placeholder="Message"></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="12u">
+                                <input type="submit" value="Send Message" />
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+            </section>
+
+    </div>
+
+<!-- Footer -->
+    <div id="footer">
+
+        <!-- Copyright -->
+            <ul class="copyright">
+                <li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
             </ul>
-          </div>
-          
-          <!--Meet AP-->
-          <div class="slide static-img img-center" style="z-index: 1; background: url('http://code.arthurpachachura.com/assets/img/excellence.jpg');">
-            <div class="slidetext-center">
-              <div class="slidetext-content h1">
-              Meet<br><big>Arthur Pachachura</big>
-              </div>
-            </div>
-          </div>
 
-          <!--I'm A-->
-          <div class="slide dynamic-img img-center" style="z-index: 3; background: url('http://code.arthurpachachura.com/assets/img/drilling.png');">
-            <div class="slidetext-center">
-              <div class="slidetext-content h1">I'm a future computer and electrical engineer attending LASA HS in Austin, Texas.
-              </div>
-            </div>
-          </div>
-        </div>
-          
-        <!--LASA and Scouts-->
-        <div class="slide static-img img-center" style="z-index: 2; background: url('http://code.arthurpachachura.com/assets/img/lifescout.jpg');">
-          <div class="outer" style="padding:60px 0 60px 0;"></div>
-          <div class="slidetext-static h2">I am the programming lead for the award-winning LASA Robotics team and a Scout Instructor in Troop 448.</div>
-          <div class="outer" style="padding:60px 0 60px 0;"></div>
-        </div>
-
-        <!--Volunteer-->
-        <div class="slide dynamic-img img-center" style="z-index: 2; background: url('http://code.arthurpachachura.com/assets/img/training.jpg');">
-          <div class="outer" style="padding:60px 0 60px 0;"></div>
-          <div class="slidetext-static h2">I've volunteered at the FIRST Robotics World Championship as Field Control System Operator and Robot Inspector.</div>
-          <div class="outer" style="padding:60px 0 60px 0;"></div>
-        </div>
-
-        <!--Work With-->
-        <div class="slide static-img img-center" style="z-index: 2; background: url('http://code.arthurpachachura.com/assets/img/teammeeting.jpg');">
-          <div class="outer" style="padding:60px 0 60px 0;"></div>
-          <div class="slidetext-static h2">I've worked with C, C++, C#, Visual Basic, HTML, CSS, JavaScript, and jQuery on both Linux and Windows systems.</div>
-          <div class="outer" style="padding:60px 0 60px 0;"></div>
-        </div>
-
-        <!--Download Resume-->
-        <div class="slide color-img" style="z-index: 2; background: #000;">
-          <div class="outer" style="padding:10px 0 10px 0;"></div>
-          <div class="slidetext-static h2">Need more info?</div>
-          <div class="outer"></div>
-          <button type="button" onclick="location.href='pub/resume.pdf';" class="btn btn-default btn-lg">
-            <span>Download Resume</span>
-          </button>
-          <div class="outer" style="padding:20px 0 20px 0;"></div>
-        </div>
-        
-        <!--Contact-->
-        <div class="slide color-img" style="z-index: 1; background: #222;">
-          <div class="outer" style="padding:10px 0 10px 0;"></div>
-          <h3><b>Find me on <a class="contact-img contact-img-github"  href="https://github.com/smo-key"></a> or send me a 
-            <a class="contact-img contact-img-gmail" href="mailto:pachachura.arthur@gmail.com"></a></b></h3>
-          <div class="outer"></div>
-        </div>
-
-        <!--Copyright-->
-        <h6 id="copyright">Copyright © YEAR Arthur Pachachura</h6>
-        
-        <!--Image Credits-->
-        <h6 id="credits">Images four and five courtesy of Gerry Cocco.</h6>
-          
-        </div>
-      </div>
     </div>
   </body>
 </html>
 
-<link href="css/index.css" rel="stylesheet" type="text/css"/>
-<script src="include/jquery.min.js"></script>
-<script src="js/main.js"></script>
+<!--<link href="css/index.css" rel="stylesheet" type="text/css"/>-->
+<!--<script src="js/main.js"></script>-->
