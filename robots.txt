@@ -3,3 +3,4 @@ Disallow: /design/
 Disallow: /include/
 Disallow: /js/
 Disallow: /css/
+Disallow: /blog/
