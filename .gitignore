@@ -1,1 +1,4 @@
 design/*
+_site/*
+node_modules/*
+*.log

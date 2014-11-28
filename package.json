@@ -1,0 +1,30 @@
+{
+  "name": "arthur-site",
+  "description": "Arthur Pachachura's website",
+  "homepage": "http://arthurpachachura.com",
+  "keywords": [
+    "website",
+    "personal",
+    "template"
+  ],
+  "author": "Arthur Pachachura <pachachura.arthur@gmail.com>",
+  "contributors": [],
+  "dependencies": {
+    "heckle": "0.0.1",
+    "node-minify": "1.0.0",
+    "string": "2.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/smo-key/website"
+  },
+  "main": "server.js",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "bugs": {
+    "url": "https://github.com/smo-key/website/issues"
+  },
+  "license": "MIT"
+}

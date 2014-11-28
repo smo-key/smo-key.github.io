@@ -9,6 +9,11 @@ Features
 - Fast load times with minified / compressed assets
 - Fully mobile compatible
 
+Required Libraries
+---
+- Hekyll (NodeJS)
+- Node-minify (NodeJS: `npm install node-minify`)
+
 ---------
 Licensed under MIT.
 
