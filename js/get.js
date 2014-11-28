@@ -20,28 +20,38 @@ function handle(response, uri, filetype) {
     }
 
 	fs.exists(page, function(exists) {
-		if(exists) {
-			fs.readFile(page, function(err, file) {
-				console.log("GET RESP: " + page);
-				response.writeHead(200, {"Content-Type": mime.lookup(filename), "Content-Length": file.length});
-				response.write(file);
-				response.end();
-			});
-		} else {
-            if (!(s(filename).contains("404.")))
-            {
-                console.log("ERR 404: " + page);
-                handle(response, "404.html", exports.type.static);
-                return;
+        try {
+            if(exists) {
+                fs.readFile(page, function(err, file) {
+                    try {
+                    console.log("GET RESP: " + page);
+                    response.writeHead(200, {"Content-Type": mime.lookup(filename), "Content-Length": file.length});
+                    response.write(file);
+                    response.end();
+                    } catch (e) {
+                        console.log("ERR 404: " + page);
+                        handle(response, "404.html", exports.type.static);
+                        return;
+                    }
+                });
+            } else {
+                if (!(s(filename).contains("404.")))
+                {
+                    throw new Error("ERR 404: " + page);
+                }
+                else
+                {
+                    response.writeHead(404, {"Content-Type": "text/plain"});
+                    response.write("404 Error!");
+                    console.log("ERR 404: No 404 page found!");
+                    response.end();
+                }
             }
-            else
-            {
-                response.writeHead(404, {"Content-Type": "text/plain"});
-                response.write("404 Error!");
-                console.log("ERR 404: No 404 page found!");
-                response.end();
-            }
-		}
+        } catch (e) {
+            console.log(e.message);
+            handle(response, "404.html", exports.type.static);
+            return;
+        }
 	});
 }
 
