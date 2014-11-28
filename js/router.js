@@ -37,7 +37,6 @@ function route(request, response) {
                 get.handle(response, uri, get.type.jekyll);
                 break;
         }
-
 	} else {
         console.log(request.method + ": Illegal request at " + uri);
 		response.writeHead(405, {"Content-Type:": "text/plain"});

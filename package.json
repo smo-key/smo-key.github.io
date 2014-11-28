@@ -12,7 +12,8 @@
   "dependencies": {
     "node-minify": "1.0.0",
     "string": "2.2.0",
-    "mime": "1.2.11"
+    "mime": "1.2.11",
+    "heckle-blog": "git+https://github.com/smo-key/heckle.git"
   },
   "repository": {
     "type": "git",

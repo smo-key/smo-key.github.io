@@ -8,7 +8,7 @@ exports.getStaticPage = function(page) {
 }
 exports.jekyllPagesPath = "/_site/";
 exports.getJekyllPage = function(page) {
-	return exports.mainPath + exports.staticPagesPath + page;
+	return exports.mainPath + exports.jekyllPagesPath + page;
 }
 exports.getRootPage = function(page) {
 	return exports.mainPath + "/" + page;
