@@ -4,6 +4,7 @@ var http = require("http"),
     fs = require("fs"),
     s = require("string"),
     vars = require("./vars.js"),
+    error = require("./error.js"),
     get = require("./get.js");
 
 function endsWith(str, suffix) {
@@ -18,7 +19,7 @@ function route(request, response) {
 	console.log(request.method + " INIT: " + uri);
 	if(uri.indexOf("../") != -1) {
 		console.log("ERR 403: Tree-walking attack attempted at " + uri);
-		errHandler.errorCode(403, response, uri, null, "My tree will not be walked upon.");
+		error.handle(403, response, uri, null, "My tree will not be walked upon.");
 		return;
 	}
 	if(request.method == "GET") {
