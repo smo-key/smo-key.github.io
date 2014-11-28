@@ -1,0 +1,65 @@
+<html>
+  <head>
+    <title><%= title %></title>
+    <link href='style.css' rel='stylesheet' />
+    <meta name='description' content='<%= description.substring(0, 100) %>...' />
+  </head>
+  <body>
+    <div class='page'>
+      <div class='header'>
+        <h1><%= name %></h1>
+        <h2><%= description %></h2>
+        <% if (licenses) { %>
+          <div class='licenses'>
+          licensed under
+          <% licenses.map(function(l) { %>
+            <% if (l.url) { %><a href='<%= l.url %>'><% } %>
+              <span class='license'><%= l.type %></span>
+            <% if (l.url) { %> </a> <% } %>
+          <% }); %>
+          </div>
+        <% } %>
+      </div>
+      <div class='npm-install'>
+        Install version <%= version %>:
+        <code>$ npm install <%= name %> <%= preferGlobal ? '-g' : '' %></code>
+      </div>
+      <div class='readme'>
+        <%= readme %>
+      </div>
+      <div class='footer'>
+        <% if (contributors.length) { %>
+          <div class='contributors block'>
+            <h4>Contributors</h4>
+            <ul>
+            <% contributors.map(function(c) { %>
+              <li><%= c.name %></li>
+            <% }); %>
+            </ul>
+          </div>
+        <% } %>
+        <% if (Object.keys(dependencies).length) { %>
+          <div class='dependencies block'>
+            <h4>Dependencies</h4>
+            <ul>
+            <% Object.keys(dependencies).map(function(x) { %>
+              <li><a href='http://search.npmjs.org/#/<%= x %>'><%= x %></a></li>
+            <% }); %>
+            </ul>
+          </div>
+        <% } %>
+
+        <div class='copyright'>
+          &copy; <%= year %>
+          <% if (author) { %>
+            <% if (author.url) { %>
+              <a rel='author' href='<%=author.url%>'><%= author.name %></a>
+            <% } else { %>
+              <%= author.name %>
+            <% } %>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

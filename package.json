@@ -10,9 +10,9 @@
   "author": "Arthur Pachachura <pachachura.arthur@gmail.com>",
   "contributors": [],
   "dependencies": {
-    "heckle": "0.0.1",
     "node-minify": "1.0.0",
-    "string": "2.2.0"
+    "string": "2.2.0",
+    "mime": "1.2.11"
   },
   "repository": {
     "type": "git",

@@ -4,7 +4,7 @@ var http = require("http"),
     path = require("path"),
     fs = require("fs"),
     compressor = require("node-minify"),
-    heckle = require("heckle"),
+    heckle = require("./js-lib/index.js"),
     vars = require("./js/vars.js"),
     router = require("./js/router.js");
 

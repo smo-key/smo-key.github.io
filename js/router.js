@@ -3,8 +3,8 @@ var http = require("http"),
     path = require("path"),
     fs = require("fs"),
     s = require("string"),
-    static = require("./static.js"),
-    vars = require("./vars.js");
+    vars = require("./vars.js"),
+    get = require("./get.js");
 
 function endsWith(str, suffix) {
     return str.indexOf(suffix, str.length - suffix.length) !== -1;
@@ -23,31 +23,20 @@ function route(request, response) {
 	}
 	if(request.method == "GET") {
         var uritrim = s(uri).chompRight(".html").chompLeft("/").s;
+
         switch(uritrim)
         {
             case "":
             case "index":
                 //Index page
-                static.handle(response, "index.html"); break;
+                get.handle(response, "index.html", get.type.jekyll); break;
+            case "favicon.ico":
+                get.handle(response, "favicon.ico", get.type.root); break;
             default:
-                //check if file exists
-                fs.exists(filepath, function(exists) {
-                    if(exists) {
-                        fs.readFile(filepath, function(err, file) {
-                            if(err) {
-                                console.log("ERR recieving file: " + err);
-                                return;
-                            }
-                            response.writeHead(200, {"Content-Type": "image/x-icon", "Content-Length": file.length});
-                            response.write(file, "binary");
-                            response.end();
-                        });
-                    } else {
-                        console.log("ERR 404: " + uri);
-                        static.handle(response, "404.html");
-                    }
-                });
+                get.handle(response, uri, get.type.jekyll);
+                break;
         }
+
 	} else {
         console.log(request.method + ": Illegal request at " + uri);
 		response.writeHead(405, {"Content-Type:": "text/plain"});
