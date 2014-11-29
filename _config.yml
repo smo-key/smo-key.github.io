@@ -1,13 +1,12 @@
 # Site settings
-title: Arthur Pachachura - The Comp Life
+title: Arthur Pachachura
 email: pachachura.arthur@gmail.com
-description: "Arthur Pachachura's Awesome Blog for AP Computer Science"
-#baseurl: ""
-baseurl: /blog
-url: "http://arthurpachachura.com/blog"
+description: "Arthur Pachachura's Awesome Website"
+url: "http://arthurpachachura.com/"
 github_username:  smo-key
 
 # Build settings
+baseurl: ""
 markdown: kramdown
 permalink: /:title
 relative_permalinks: false

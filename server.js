@@ -4,7 +4,7 @@ var http = require("http"),
     path = require("path"),
     fs = require("fs"),
     compressor = require("node-minify"),
-    heckle = require("heckle-blog"),
+    hekyll = require("hekyll"),
     vars = require("./js/vars.js"),
     router = require("./js/router.js");
 
@@ -12,8 +12,8 @@ var http = require("http"),
 port = process.argv[2] || 8888;
 
 //Generate Heckle pages
-console.log("Heckle is generating pages...");
-heckle.generate();
+console.log("Hekyll is generating pages...");
+hekyll.generate();
 
 //compress css and js
 // TODO implement compression
