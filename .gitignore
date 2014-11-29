@@ -1,4 +1,4 @@
 design/
-_site/
+_site/*
 .sass-cache/
 *.log
