@@ -1,0 +1,20 @@
+# Site settings
+title: Arthur Pachachura
+email: pachachura.arthur@gmail.com
+description: "Arthur Pachachura's Awesome Website"
+url: "http://arthurpachachura.com/"
+github_username:  smo-key
+
+# Build settings
+#baseurl: ""
+include: [".htaccess"]
+permalink: /:title
+relative_permalinks: false
+highlighter: pygments
+timezone: America/Chicago
+lsi: true
+
+# Syntax highlighter
+markdown: kramdown
+kramdown:
+  input: GFM
