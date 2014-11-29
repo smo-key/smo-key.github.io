@@ -1,7 +1,11 @@
-# Site settings
+# Head settings
 title: Arthur Pachachura
+author: Arthur Pachachura
 email: pachachura.arthur@gmail.com
-description: "Arthur Pachachura's Awesome Website"
+description: "Arthur Pachachura's Website"
+keywords: Arthur, Pachachura, Code, Developer, Designer
+
+# Site settings
 url: "http://arthurpachachura.com/"
 github_username:  smo-key
 
