@@ -9,10 +9,21 @@ Features
 - Fast load times with minified / compressed assets
 - Fully mobile compatible
 
-Required Libraries
+Installation
 ---
-- Hekyll (NodeJS)
-- Node-minify (NodeJS: `npm install node-minify`)
+To install onto your system, download these files and run `npm link` as root within the downloaded directory.
+
+To start the server, simply run `node server.js` and you're good to go!
+
+Included Libraries
+---
+- node-minify (NodeJS)
+- node-sass (NodeJS)
+- express (NodeJS)
+- string (NodeJS)
+- mime (NodeJS)
+- Bootstrap (CSS/JS)
+- jQuery (JS)
 
 ---------
 Licensed under MIT.

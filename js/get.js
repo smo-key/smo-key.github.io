@@ -56,5 +56,5 @@ function handle(response, uri, filetype) {
 }
 
 exports.type = { static:0, root:1, jekyll:2 };
-exports.typecount = 2;
+exports.typecount = 3;
 exports.handle = handle;

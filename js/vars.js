@@ -1,15 +1,30 @@
+var fs = require("fs");
+
 exports.mainPath = process.cwd();
 exports.serverName = "Arthur Pachachura's Personal Website";
 exports.debug = true;
 
-exports.staticPagesPath = "/static/";
-exports.getStaticPage = function(page) {
+//inputs
+exports.staticPath = "/static/";
+exports.sassPath = "_sass/";
+exports.imagePAth = "/img/";
+
+//rendered files
+exports.outputPath = "_site/";
+
+exports.getPage = function(page, path) {
 	return exports.mainPath + exports.staticPagesPath + page;
 }
-exports.jekyllPagesPath = "/_site/";
-exports.getJekyllPage = function(page) {
-	return exports.mainPath + exports.jekyllPagesPath + page;
+exports.getFileName = function(path) {
+    return path.replace(/^.*[\\\/]/, '');
 }
-exports.getRootPage = function(page) {
-	return exports.mainPath + "/" + page;
+
+//Templating checks
+exports.hasFrontMatter = function(file) {
+    var fd = fs.openSync(file, "r");
+    var b = new Buffer(4);
+    var ret = fs.readSync(fd, b, 0, 4, 0) == 4;
+    ret = ret && (b.toString() == "---\n" || b.toString() == "---\r");
+    fs.closeSync(fd);
+    return ret;
 }
