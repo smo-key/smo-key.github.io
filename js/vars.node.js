@@ -9,6 +9,7 @@ exports.debug = true;
 exports.staticPath = "/static/";
 exports.sassPath = "css/";
 exports.cssPath = "css/"
+exports.jsPath = "js/";
 exports.imagePath = "/img/";
 
 //rendered files

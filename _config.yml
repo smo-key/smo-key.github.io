@@ -1,15 +1,18 @@
-# Site settings
-title: Arthur Pachachura
-email: pachachura.arthur@gmail.com
-description: "Arthur Pachachura's Awesome Website"
-url: "http://arthurpachachura.com/"
-github_username:  smo-key
+### LOCATING FILES ###
+#can be files or directories -- search IS recursive through directories and allows regex
 
-# Build settings
-baseurl: ""
-markdown: kramdown
-permalink: /:title
-relative_permalinks: false
-highlighter: pygments
-timezone: America/Chicago
-lsi: true
+#parse known file types (.js, .css, .scss) and serve from _site directory
+parse: [ "css/", "js/", "fonts/", "./*.html" ]
+#statically serve / link / copy all files except those already parsed from the "parse" list above
+include: [ "fonts/", "pub/", "img/", "favicon.ico" ]
+#what to do with includes above: copy (just copy files over), link (create symlinks ot actual files), or serve (create http server)
+includetype: copy
+#exclude file name filters (regex allowed)
+exclude: [ "\\.node\\.js" ]
+#site output directory
+siteDir: "_site/"
+
+### PARSING ###
+
+#minimizeCSS: true  #option not implemented
+#minimizeJS: true   #option not implemented

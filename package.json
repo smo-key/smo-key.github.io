@@ -17,7 +17,8 @@
     "node-sass": "1.2.x",
     "rimraf": "2.2.8",
     "async": "0.9.0",
-    "prototypes": "0.3.1"
+    "prototypes": "0.3.1",
+    "hekyll": "git+https://github.com/smo-key/hekyll.git"
   },
   "repository": {
     "type": "git",
