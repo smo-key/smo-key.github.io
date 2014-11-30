@@ -5,9 +5,11 @@ exports.serverName = "Arthur Pachachura's Personal Website";
 exports.debug = true;
 
 //inputs
+// TODO make sure not path starts with "/"
 exports.staticPath = "/static/";
-exports.sassPath = "_sass/";
-exports.imagePAth = "/img/";
+exports.sassPath = "css/";
+exports.cssPath = "css/"
+exports.imagePath = "/img/";
 
 //rendered files
 exports.outputPath = "_site/";

@@ -22,6 +22,7 @@ fs.mkdirSync(vars.outputPath, function(error){ if(error) { throw(error); }});
 fs.mkdirSync(vars.outputPath + "css", function(error){ if(error) { throw(error); }});
 
 //generate css from sass
+// TODO check if exists
 fs.readdir("./" + vars.sassPath, function(err, files){
     if(err) throw err;
     files.forEach(function(file){
@@ -50,8 +51,8 @@ fs.readdir("./" + vars.sassPath, function(err, files){
 });
 
 //compress and copy css and js
-// TODO implement compression
-
+// TODO implement compress anything with .css extension in css folder (that does not end with .min.css extension)
+// TODO implement compress anything with .js extension in js folder (that does not end with .min.js extension)
 
 //Generate HTML pages
 // TODO implement generation
