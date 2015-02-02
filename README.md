@@ -1,31 +1,23 @@
-Arthur Pachachura's Personal Website
-=======
+# Arthur Pachachura's Website
 
-This website was created using HTML, CSS, and Javascript, and uses the Jekyll, jQuery, and Bootstrap libraries.
+This website was created using HTML, CSS, and Javascript, and uses the lots and lots of other people's libraries.  See below.
 
-Features
----
-- Easy to write slide-based layout
-- Fast load times with minified / compressed assets
-- Fully mobile compatible
+## Features
+- In design... come back later!
 
-Installation
----
-To install onto your system, download these files and run `npm link` as root within the downloaded directory.
+## Installation
+To install onto your system, download these files and run `npm link` within the downloaded directory.
 
 To start the server, simply run `node server.js` and you're good to go!
 
-Included Libraries
----
-- node-minify (NodeJS)
-- node-sass (NodeJS)
-- express (NodeJS)
-- string (NodeJS)
-- mime (NodeJS)
-- Bootstrap (CSS/JS)
-- jQuery (JS)
+## Other People's Stuff (in no particular order)
+- NodeJS
+- ExpressJS (express)
+- Mustache Templating (mu2)
+- YAML Parsing (node-yaml)
+- Octicons, Font Awesome, Glyphicons, and others
 
 ---------
-Licensed under MIT.
+Licensed under the usual MIT license.
 
 Arthur Pachachura (smo-key :bear:)

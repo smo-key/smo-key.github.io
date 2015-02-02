@@ -1,39 +1,59 @@
-//instantiate variables
-var http = require("http"),
-    url = require("url"),
-    path = require("path"),
-    fs = require("fs"),
-    compressor = require("node-minify"),
-    app = require("express"),
-    sass = require("node-sass"),
-    rmdir = require("rimraf"),
-    vars = require("./js/vars.node.js"),
-    s = require("string"),
-    hekyll = require("hekyll");
-    //router = require("./js/router.js");
-//require only includes
-require("prototypes");
+var http        = require("http");
+var url         = require("url");
+var path        = require("path");
+var fs          = require("fs");
+var express     = require("express");
+var app         = express();
+var cons        = require("consolidate");
+var logger      = require("morgan");
+var yaml        = require("js-yaml");
+var bodyparser  = require("body-parser");
+var cookparser  = require("cookie-parser");
+var mu          = require("mu2");
 
-//get server port
-port = process.argv[2] || 8888;
+//initialize html renderer
+app.engine('html', cons.mustache);
+app.set('view engine', 'html');
+app.set("view options", {layout: false});
+app.set('views', __dirname + '/html');
 
-hekyll.parse();
-hekyll.include();
+//read config
+configdata = fs.readFileSync("config.yml");
+config = yaml.safeLoad(configdata);
+config.port = process.argv[2] || config.port || 8000; //server port
 
-//Generate HTML pages
-// TODO implement generation
+//create console logger
+app.use(logger('dev'));
 
-//create server and router
-http.createServer(function(request, response) {
-    //GET JEKYLLED SITE
-	app.get(vars.outputPath + "/", function (req, res) {
-        console.log("GOT request at JEKYLL");
-    });
-    //GET CSS
-	app.get(vars.outputPath + "css/", function (req, res) {
-        console.log("GOT request at CSS");
-    });
-    //GET STATIC PAGES
+//create regex params
+app.param(function(name, fn){
+  if (fn instanceof RegExp) {
+    return function(req, res, next, val){
+      var captures;
+      if (captures = fn.exec(String(val))) {
+        req.params[name] = captures;
+        next();
+      } else {
+        next('route');
+      }
+    }
+  }
+});
+//app.param('id', /^([a-zA-Z0-9]){8}$/);
 
-}).listen(parseInt(port, 10));
-console.log("SERVE: Server started on port " + port);
+//initialize reply parsers
+app.use(bodyparser.urlencoded({ extended: true }));
+app.use(bodyparser.json());
+app.use(cookparser());
+
+//TODO index get
+
+//serve static files
+app.use('/img', express.static(__dirname + '/img'));
+app.use('/css', express.static(__dirname + '/css'));
+app.use('/fonts', express.static(__dirname + '/fonts'));
+app.use('/js', express.static(__dirname + '/js'));
+
+//listen
+app.listen(config.port);
+console.log("Server ready on port " + config.port);
