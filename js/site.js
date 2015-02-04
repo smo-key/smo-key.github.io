@@ -25,3 +25,9 @@ window.requestAnimFrame = (function(){
             window.setTimeout(callback, 1000 / 60);
           };
 })();
+
+$('.form-group .fa-search').hover(function() {
+  //set search bar in focus
+  $('input[type=search]').focus();
+});
+

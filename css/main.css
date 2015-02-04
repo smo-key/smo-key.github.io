@@ -9,3 +9,94 @@ h1 {
 h2 {
   font-family: 'helvetica hv';
 }
+
+/*** Navbar ***/
+.navbar {
+  background-color: #ffffff;
+  width: 100%;
+  border-bottom: 3px solid #ff6633;
+}
+
+/*** Brand ***/
+.navbar-brand {
+  padding-top: 0;
+  width: 64px;
+  font-size: 1.9em;
+  font-family: 'helvetica lt';
+  color: #222!important;
+}
+.navbar-brand img { width: 50px; }
+.navbar-right li {
+  padding-left: 6px;
+  margins: 0px;
+}
+.navbar-nav .p.active,
+.navbar-nav .p.active:hover,
+.navbar-nav .p.active:focus,
+.navbar-nav .p.active:visited {
+  background-color: #ff6633;
+  color: #fff;
+}
+.navbar-nav .e.active,
+.navbar-nav .e.active:hover,
+.navbar-nav .e.active:focus,
+.navbar-nav .e.active:visited {
+  background-color: #00cc00;
+  color: #fff;
+}
+.navbar-nav .c.active,
+.navbar-nav .c.active:hover,
+.navbar-nav .c.active:focus,
+.navbar-nav .c.active:visited {
+  background-color: #3399ff;
+  color: #fff;
+}
+
+button {
+  -webkit-transition: background-color 0.2s, color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
+}
+.form-group .fa-search {
+  margin-right: 4px;
+  font-size: 1.2em;
+  height: 32px;
+  width: 32px;
+  text-align: center;
+  line-height: 32px;
+  text-decoration: none;
+}
+
+/*** Links ***/
+a { color: #ff6633; text-decoration: none; }
+a:hover { color: #e55c2f; }
+
+/*** Forms and Buttons ***/
+.form-control, .btn {
+  border-radius: 0;
+  box-shadow: outset 0 1px 1px rgba(0,0,0,.075);
+}
+.form-control:focus, .btn:focus {
+  border-color: #ff6633;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075), 0 0 4px rgba(255, 102, 51, 0.6);
+}
+.btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.activhtml, body {
+  width: 100%;
+  height: 100%;
+}
+
+/*** SEARCH BOX ***/
+input[type=search] {
+  width: 0px!important;
+  opacity: 0;
+  display: none;
+  visibility: hidden!imprortant;
+
+  -webkit-transition: all .5s;
+  transition: all .5s;
+}
+input[type=search]:focus {
+  width: 200px!important;
+  opacity: 1;
+  display: inline-block;
+  visibility: visible!important;
+}
