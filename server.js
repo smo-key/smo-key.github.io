@@ -54,6 +54,13 @@ app.use('/css', express.static(__dirname + '/css'));
 app.use('/fonts', express.static(__dirname + '/fonts'));
 app.use('/js', express.static(__dirname + '/js'));
 
+//serve INDEX
+app.get('/', function (req, res) {
+  res.render('index', {
+    partials: { }
+  });
+});
+
 //listen
 app.listen(config.port);
 console.log("Server ready on port " + config.port);

@@ -1,10 +1,21 @@
+@import url("font-awesome.min.css");
 @import url("octicons/octicons.css");
 
 @font-face {
   font-family: 'helvetica';
   src: url('helveticaneue/helvetica-neue.ttf') format('truetype');
-  font-weight: 400;
-  font-style: normal;
+}
+@font-face {
+  font-family: 'helvetica thex';
+  src: url('helveticaneue/HelveticaNeueLTStd-ThEx.otf') format('opentype');
+}
+@font-face {
+  font-family: 'helvetica th';
+  src: url('helveticaneue/HelveticaNeueLTStd-Th.otf') format('opentype');
+}
+@font-face {
+  font-family: 'helvetica hv';
+  src: url('helveticaneue/HelveticaNeueLTStd-Hv.otf') format('opentype');
 }
 
 /*@font-face {
