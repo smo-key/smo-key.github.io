@@ -6,8 +6,11 @@ $col-orange: #ff6633;
 $col-orange-link: #cc5026;
 $col-current: #3399ff;
 
+$col-gray-light: #eee;
+$col-gray-xlight: #f8f8f8;
+
 body {
-  background-color: #eee;
+  background-color: $col-gray-xlight;
   font-family: 'helvetica';
 }
 
@@ -20,20 +23,25 @@ h2 {
 
 /*** Navbar ***/
 .navbar {
-  background-color: #ffffff;
+  background-color: #fff;
   width: 100%;
   border-bottom: 3px solid $col-blue;
 }
+.container { overflow: hidden!important; }
 
 /*** Brand ***/
 .navbar-brand {
   padding-top: 0;
-  width: 64px;
   font-size: 1.9em;
   font-family: 'helvetica lt';
   color: #222!important;
 }
-.navbar-brand img { width: 50px; }
+.navbar-brand.name {
+  padding-top: 19px;
+  margin-right: 12px;
+  font-family: 'helvetica';
+}
+.navbar-brand img { width: 50px; border-radius: 50%; }
 .navbar-right li {
   padding-left: 6px;
   margins: 0px;
@@ -93,7 +101,7 @@ a:hover { color: $col-blue-link; }
 }
 
 /*** LOADER ***/
-#loader {
+.loader {
   -webkit-animation: spin 1.2s linear infinite;
   border: 3px solid transparent;
   border-radius: 50%;
@@ -129,6 +137,8 @@ a:hover { color: $col-blue-link; }
     border-top-color: $col-blue;
   }
 }
+
+.loader.main { margin-top: 36px; height: 64px; width: 64px; }
 
 @-webkit-keyframes spin {
   0% {

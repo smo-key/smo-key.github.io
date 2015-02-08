@@ -1,5 +1,5 @@
 body {
-  background-color: #eee;
+  background-color: #f8f8f8;
   font-family: 'helvetica'; }
 
 h1 {
@@ -10,20 +10,28 @@ h2 {
 
 /*** Navbar ***/
 .navbar {
-  background-color: #ffffff;
+  background-color: #fff;
   width: 100%;
   border-bottom: 3px solid #3399ff; }
+
+.container {
+  overflow: hidden !important; }
 
 /*** Brand ***/
 .navbar-brand {
   padding-top: 0;
-  width: 64px;
   font-size: 1.9em;
   font-family: 'helvetica lt';
   color: #222 !important; }
 
+.navbar-brand.name {
+  padding-top: 19px;
+  margin-right: 12px;
+  font-family: 'helvetica'; }
+
 .navbar-brand img {
-  width: 50px; }
+  width: 50px;
+  border-radius: 50%; }
 
 .navbar-right li {
   padding-left: 6px;
@@ -76,7 +84,7 @@ a:hover {
   height: 100%; }
 
 /*** LOADER ***/
-#loader {
+.loader {
   -webkit-animation: spin 1.2s linear infinite;
   border: 3px solid transparent;
   border-radius: 50%;
@@ -84,7 +92,7 @@ a:hover {
   margin: 0 auto;
   position: relative;
   width: 50px; }
-  #loader div {
+  .loader div {
     border: inherit;
     border-radius: inherit;
     bottom: -3px;
@@ -92,17 +100,22 @@ a:hover {
     position: absolute;
     right: -3px;
     top: -3px; }
-  #loader :nth-child(1) {
+  .loader :nth-child(1) {
     -webkit-animation: spin 1s linear infinite;
     border-top-color: #ff6633;
     transform: rotate(120deg); }
-  #loader :nth-child(2) {
+  .loader :nth-child(2) {
     -webkit-animation: spin 2s linear infinite;
     border-top-color: #00c100;
     transform: rotate(240deg); }
-  #loader :nth-child(3) {
+  .loader :nth-child(3) {
     -webkit-animation: spin 1.2s linear infinite;
     border-top-color: #3399ff; }
+
+.loader.main {
+  margin-top: 36px;
+  height: 64px;
+  width: 64px; }
 
 @-webkit-keyframes spin {
   0% {
