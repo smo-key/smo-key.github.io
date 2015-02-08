@@ -8,14 +8,78 @@ h1 {
 h2 {
   font-family: 'helvetica hv'; }
 
+.container {
+  overflow: hidden !important; }
+
 /*** Navbar ***/
 .navbar {
   background-color: #fff;
-  width: 100%;
-  border-bottom: 3px solid #3399ff; }
+  width: 100%; }
 
-.container {
-  overflow: hidden !important; }
+.navbar-border {
+  border: 2px solid #3399ff;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  padding: 0; }
+
+.navbar .navbar-load {
+  border: 2px solid transparent;
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  padding: 0;
+  margin-top: -4px; }
+
+.navbar.load .navbar-load {
+  -webkit-animation: loadbar 2s linear infinite; }
+
+.navbar.load .navbar-border {
+  -webkit-animation: loadcolor 2s linear infinite; }
+
+@-webkit-keyframes loadbar {
+  0% {
+    border-color: #00c100;
+    width: 0%; }
+
+  33.3% {
+    border-color: #00c100;
+    width: 100%; }
+
+  33.4% {
+    border-color: #ff6633;
+    width: 0%; }
+
+  66.6% {
+    border-color: #ff6633;
+    width: 100%; }
+
+  66.7% {
+    border-color: #3399ff;
+    width: 0%; }
+
+  100% {
+    border-color: #3399ff;
+    width: 100%; } }
+
+@-webkit-keyframes loadcolor {
+  0% {
+    border-color: #3399ff; }
+
+  33.3% {
+    border-color: #3399ff; }
+
+  33.4% {
+    border-color: #00c100; }
+
+  66.6% {
+    border-color: #00c100; }
+
+  66.7% {
+    border-color: #ff6633; }
+
+  100% {
+    border-color: #ff6633; } }
 
 /*** Brand ***/
 .navbar-brand {
@@ -111,11 +175,6 @@ a:hover {
   .loader :nth-child(3) {
     -webkit-animation: spin 1.2s linear infinite;
     border-top-color: #3399ff; }
-
-.loader.main {
-  margin-top: 36px;
-  height: 64px;
-  width: 64px; }
 
 @-webkit-keyframes spin {
   0% {

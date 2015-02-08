@@ -4,7 +4,10 @@ $col-green: #00c100;
 $col-green-link: #009300;
 $col-orange: #ff6633;
 $col-orange-link: #cc5026;
+
 $col-current: #3399ff;
+$col-current-1: #00c100;
+$col-current-2: #ff6633;
 
 $col-gray-light: #eee;
 $col-gray-xlight: #f8f8f8;
@@ -21,13 +24,46 @@ h2 {
   font-family: 'helvetica hv';
 }
 
+.container { overflow: hidden!important; }
+
 /*** Navbar ***/
 .navbar {
   background-color: #fff;
   width: 100%;
-  border-bottom: 3px solid $col-blue;
 }
-.container { overflow: hidden!important; }
+.navbar-border {
+  border: 2px solid $col-blue;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  padding: 0;
+}
+.navbar .navbar-load {
+  border: 2px solid transparent;
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  padding: 0;
+  margin-top: -4px;
+}
+.navbar.load .navbar-load { -webkit-animation: loadbar 2s linear infinite; }
+.navbar.load .navbar-border { -webkit-animation: loadcolor 2s linear infinite; }
+@-webkit-keyframes loadbar {
+  0% { border-color: $col-green; width: 0%; }
+  33.3% { border-color: $col-green; width: 100%; }
+  33.4% { border-color: $col-orange; width: 0%; }
+  66.6% { border-color: $col-orange; width: 100%; }
+  66.7% { border-color: $col-blue; width: 0%; }
+  100% { border-color: $col-blue; width: 100%; }
+}
+@-webkit-keyframes loadcolor {
+  0% { border-color: $col-blue; }
+  33.3% { border-color: $col-blue;  }
+  33.4% { border-color: $col-green; }
+  66.6% { border-color: $col-green; }
+  66.7% { border-color: $col-orange; }
+  100% { border-color: $col-orange; }
+}
 
 /*** Brand ***/
 .navbar-brand {
@@ -137,8 +173,6 @@ a:hover { color: $col-blue-link; }
     border-top-color: $col-blue;
   }
 }
-
-.loader.main { margin-top: 36px; height: 64px; width: 64px; }
 
 @-webkit-keyframes spin {
   0% {

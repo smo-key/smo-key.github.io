@@ -1,72 +1,152 @@
-/* line 12, /home/arthur/git/website-node/sass/main.scss */
+/* line 15, /home/arthur/git/website-node/sass/main.scss */
 body {
   background-color: #f8f8f8;
   font-family: 'helvetica'; }
 
-/* line 17, /home/arthur/git/website-node/sass/main.scss */
+/* line 20, /home/arthur/git/website-node/sass/main.scss */
 h1 {
   font-family: 'helvetica th'; }
 
-/* line 20, /home/arthur/git/website-node/sass/main.scss */
+/* line 23, /home/arthur/git/website-node/sass/main.scss */
 h2 {
   font-family: 'helvetica hv'; }
 
-/*** Navbar ***/
-/* line 25, /home/arthur/git/website-node/sass/main.scss */
-.navbar {
-  background-color: #fff;
-  width: 100%;
-  border-bottom: 3px solid #3399ff; }
-
-/* line 30, /home/arthur/git/website-node/sass/main.scss */
+/* line 27, /home/arthur/git/website-node/sass/main.scss */
 .container {
   overflow: hidden !important; }
 
+/*** Navbar ***/
+/* line 30, /home/arthur/git/website-node/sass/main.scss */
+.navbar {
+  background-color: #fff;
+  width: 100%; }
+
+/* line 34, /home/arthur/git/website-node/sass/main.scss */
+.navbar-border {
+  border: 2px solid #3399ff;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  padding: 0; }
+
+/* line 41, /home/arthur/git/website-node/sass/main.scss */
+.navbar .navbar-load {
+  border: 2px solid transparent;
+  margin: 0 auto;
+  position: relative;
+  width: 50%;
+  padding: 0;
+  margin-top: -4px; }
+
+/* line 49, /home/arthur/git/website-node/sass/main.scss */
+.navbar.load .navbar-load {
+  -webkit-animation: loadbar 2s linear infinite; }
+
+/* line 50, /home/arthur/git/website-node/sass/main.scss */
+.navbar.load .navbar-border {
+  -webkit-animation: loadcolor 2s linear infinite; }
+
+@-webkit-keyframes loadbar {
+  /* line 52, /home/arthur/git/website-node/sass/main.scss */
+  0% {
+    border-color: #00c100;
+    width: 0%; }
+
+  /* line 53, /home/arthur/git/website-node/sass/main.scss */
+  33.3% {
+    border-color: #00c100;
+    width: 100%; }
+
+  /* line 54, /home/arthur/git/website-node/sass/main.scss */
+  33.4% {
+    border-color: #ff6633;
+    width: 0%; }
+
+  /* line 55, /home/arthur/git/website-node/sass/main.scss */
+  66.6% {
+    border-color: #ff6633;
+    width: 100%; }
+
+  /* line 56, /home/arthur/git/website-node/sass/main.scss */
+  66.7% {
+    border-color: #3399ff;
+    width: 0%; }
+
+  /* line 57, /home/arthur/git/website-node/sass/main.scss */
+  100% {
+    border-color: #3399ff;
+    width: 100%; } }
+
+@-webkit-keyframes loadcolor {
+  /* line 60, /home/arthur/git/website-node/sass/main.scss */
+  0% {
+    border-color: #3399ff; }
+
+  /* line 61, /home/arthur/git/website-node/sass/main.scss */
+  33.3% {
+    border-color: #3399ff; }
+
+  /* line 62, /home/arthur/git/website-node/sass/main.scss */
+  33.4% {
+    border-color: #00c100; }
+
+  /* line 63, /home/arthur/git/website-node/sass/main.scss */
+  66.6% {
+    border-color: #00c100; }
+
+  /* line 64, /home/arthur/git/website-node/sass/main.scss */
+  66.7% {
+    border-color: #ff6633; }
+
+  /* line 65, /home/arthur/git/website-node/sass/main.scss */
+  100% {
+    border-color: #ff6633; } }
+
 /*** Brand ***/
-/* line 33, /home/arthur/git/website-node/sass/main.scss */
+/* line 69, /home/arthur/git/website-node/sass/main.scss */
 .navbar-brand {
   padding-top: 0;
   font-size: 1.9em;
   font-family: 'helvetica lt';
   color: #222 !important; }
 
-/* line 39, /home/arthur/git/website-node/sass/main.scss */
+/* line 75, /home/arthur/git/website-node/sass/main.scss */
 .navbar-brand.name {
   padding-top: 19px;
   margin-right: 12px;
   font-family: 'helvetica'; }
 
-/* line 44, /home/arthur/git/website-node/sass/main.scss */
+/* line 80, /home/arthur/git/website-node/sass/main.scss */
 .navbar-brand img {
   width: 50px;
   border-radius: 50%; }
 
-/* line 45, /home/arthur/git/website-node/sass/main.scss */
+/* line 81, /home/arthur/git/website-node/sass/main.scss */
 .navbar-right li {
   padding-left: 6px;
   margins: 0px; }
 
-/* line 52, /home/arthur/git/website-node/sass/main.scss */
+/* line 88, /home/arthur/git/website-node/sass/main.scss */
 .navbar-nav .p.active, .navbar-nav .p.active:hover, .navbar-nav .p.active:focus, .navbar-nav .p.active:visited {
   background-color: #3399ff;
   color: #fff; }
 
-/* line 59, /home/arthur/git/website-node/sass/main.scss */
+/* line 95, /home/arthur/git/website-node/sass/main.scss */
 .navbar-nav .e.active, .navbar-nav .e.active:hover, .navbar-nav .e.active:focus, .navbar-nav .e.active:visited {
   background-color: #00c100;
   color: #fff; }
 
-/* line 66, /home/arthur/git/website-node/sass/main.scss */
+/* line 102, /home/arthur/git/website-node/sass/main.scss */
 .navbar-nav .c.active, .navbar-nav .c.active:hover, .navbar-nav .c.active:focus, .navbar-nav .c.active:visited {
   background-color: #ff6633;
   color: #fff; }
 
-/* line 71, /home/arthur/git/website-node/sass/main.scss */
+/* line 107, /home/arthur/git/website-node/sass/main.scss */
 button {
   -webkit-transition: background-color 0.2s, color 0.2s;
   transition: background-color 0.2s, color 0.2s; }
 
-/* line 75, /home/arthur/git/website-node/sass/main.scss */
+/* line 111, /home/arthur/git/website-node/sass/main.scss */
 .form-group .fa-search {
   margin-right: 4px;
   font-size: 1.2em;
@@ -77,33 +157,33 @@ button {
   text-decoration: none; }
 
 /*** Links ***/
-/* line 86, /home/arthur/git/website-node/sass/main.scss */
+/* line 122, /home/arthur/git/website-node/sass/main.scss */
 a {
   color: #3399ff;
   text-decoration: none; }
 
-/* line 87, /home/arthur/git/website-node/sass/main.scss */
+/* line 123, /home/arthur/git/website-node/sass/main.scss */
 a:hover {
   color: #2375c7; }
 
 /*** Forms and Buttons ***/
-/* line 90, /home/arthur/git/website-node/sass/main.scss */
+/* line 126, /home/arthur/git/website-node/sass/main.scss */
 .form-control, .btn {
   border-radius: 0;
   box-shadow: none; }
 
-/* line 94, /home/arthur/git/website-node/sass/main.scss */
+/* line 130, /home/arthur/git/website-node/sass/main.scss */
 .form-control:focus, .btn:focus {
   border-color: #3399ff;
   box-shadow: none; }
 
-/* line 98, /home/arthur/git/website-node/sass/main.scss */
+/* line 134, /home/arthur/git/website-node/sass/main.scss */
 .btn:focus, .btn:active:focus, .btn.active:focus, .btn.focus, .btn:active.focus, .btn.activhtml, body {
   width: 100%;
   height: 100%; }
 
 /*** LOADER ***/
-/* line 104, /home/arthur/git/website-node/sass/main.scss */
+/* line 140, /home/arthur/git/website-node/sass/main.scss */
 .loader {
   -webkit-animation: spin 1.2s linear infinite;
   border: 3px solid transparent;
@@ -112,7 +192,7 @@ a:hover {
   margin: 0 auto;
   position: relative;
   width: 50px; }
-  /* line 113, /home/arthur/git/website-node/sass/main.scss */
+  /* line 149, /home/arthur/git/website-node/sass/main.scss */
   .loader div {
     border: inherit;
     border-radius: inherit;
@@ -121,38 +201,32 @@ a:hover {
     position: absolute;
     right: -3px;
     top: -3px; }
-  /* line 123, /home/arthur/git/website-node/sass/main.scss */
+  /* line 159, /home/arthur/git/website-node/sass/main.scss */
   .loader :nth-child(1) {
     -webkit-animation: spin 1s linear infinite;
     border-top-color: #ff6633;
     transform: rotate(120deg); }
-  /* line 129, /home/arthur/git/website-node/sass/main.scss */
+  /* line 165, /home/arthur/git/website-node/sass/main.scss */
   .loader :nth-child(2) {
     -webkit-animation: spin 2s linear infinite;
     border-top-color: #00c100;
     transform: rotate(240deg); }
-  /* line 135, /home/arthur/git/website-node/sass/main.scss */
+  /* line 171, /home/arthur/git/website-node/sass/main.scss */
   .loader :nth-child(3) {
     -webkit-animation: spin 1.2s linear infinite;
     border-top-color: #3399ff; }
 
-/* line 141, /home/arthur/git/website-node/sass/main.scss */
-.loader.main {
-  margin-top: 36px;
-  height: 64px;
-  width: 64px; }
-
 @-webkit-keyframes spin {
-  /* line 144, /home/arthur/git/website-node/sass/main.scss */
+  /* line 178, /home/arthur/git/website-node/sass/main.scss */
   0% {
     transform: rotate(0deg); }
 
-  /* line 147, /home/arthur/git/website-node/sass/main.scss */
+  /* line 181, /home/arthur/git/website-node/sass/main.scss */
   100% {
     transform: rotate(360deg); } }
 
 /*** SEARCH BOX ***/
-/* line 154, /home/arthur/git/website-node/sass/main.scss */
+/* line 188, /home/arthur/git/website-node/sass/main.scss */
 input[type=search] {
   width: 0px !important;
   opacity: 0;
@@ -160,7 +234,7 @@ input[type=search] {
   -webkit-transition: all 0.5s;
   transition: all 0.5s; }
 
-/* line 162, /home/arthur/git/website-node/sass/main.scss */
+/* line 196, /home/arthur/git/website-node/sass/main.scss */
 input[type=search]:focus {
   width: 200px !important;
   opacity: 1;
