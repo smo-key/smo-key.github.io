@@ -10,6 +10,7 @@ var yaml        = require("js-yaml");
 var bodyparser  = require("body-parser");
 var cookparser  = require("cookie-parser");
 var mu          = require("mu2");
+var sass        = require("node-sass");
 
 //initialize html renderer
 app.engine('html', cons.mustache);
@@ -40,19 +41,46 @@ app.param(function(name, fn){
   }
 });
 //app.param('id', /^([a-zA-Z0-9]){8}$/);
+app.param('file', /^((?!(\.\.)|(\/)|(\\)).)*$/); //any filename and extension
 
 //initialize reply parsers
 app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 app.use(cookparser());
 
-//TODO index get
+//render SASS
+function renderSass(cb) {
+  sass.render({
+    file: 'sass/main.scss',
+    success: function(data) {
+      fs.writeFile('css/main.css', data.css, function() {
+        console.log("SASS   : " + "main.css compiled");
+        cb();
+      });
+    },
+    error: function(err) {
+      console.log("SASS   : " + "main.css failed - " + err.message);
+      console.log(err);
+      cb();
+    }
+  });
+}
+renderSass(function() { });
 
 //serve static files
 app.use('/img', express.static(__dirname + '/img'));
 app.use('/css', express.static(__dirname + '/css'));
 app.use('/fonts', express.static(__dirname + '/fonts'));
 app.use('/js', express.static(__dirname + '/js'));
+
+//serve LIVE UPDATE
+app.get('/live', function (req, res) {
+  renderSass(function() {
+    res.render('index', {
+      partials: { }
+    });
+  });
+});
 
 //serve INDEX
 app.get('/', function (req, res) {
@@ -63,4 +91,4 @@ app.get('/', function (req, res) {
 
 //listen
 app.listen(config.port);
-console.log("Server ready on port " + config.port);
+console.log("SERVER : Ready on port " + config.port);
