@@ -67,27 +67,29 @@ function renderSass(cb) {
 }
 renderSass(function() { });
 
+function renderMain(res) {
+  res.render('index', {
+    partials: {
+      loading: 'loading'
+    }
+  });
+}
+
+//serve LIVE UPDATE
+app.get('/live', function (req, res) {
+  renderSass(function() { renderMain(res); });
+});
+
+//serve INDEX
+app.get('/', function (req, res) {
+  renderMain(res);
+});
+
 //serve static files
 app.use('/img', express.static(__dirname + '/img'));
 app.use('/css', express.static(__dirname + '/css'));
 app.use('/fonts', express.static(__dirname + '/fonts'));
 app.use('/js', express.static(__dirname + '/js'));
-
-//serve LIVE UPDATE
-app.get('/live', function (req, res) {
-  renderSass(function() {
-    res.render('index', {
-      partials: { }
-    });
-  });
-});
-
-//serve INDEX
-app.get('/', function (req, res) {
-  res.render('index', {
-    partials: { }
-  });
-});
 
 //listen
 app.listen(config.port);
