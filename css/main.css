@@ -14,7 +14,8 @@ h2 {
 /*** Navbar ***/
 .navbar {
   background-color: #fff;
-  width: 100%; }
+  width: 100%;
+  border: 0; }
 
 .navbar-border {
   border: 2px solid #3399ff;
@@ -147,6 +148,24 @@ a:hover {
   width: 100%;
   height: 100%; }
 
+/*** TRANSPARENT NAVBAR ***/
+.navbar.nobg {
+  background-color: transparent;
+  color: #fff;
+  border-bottom: 0; }
+
+.navbar.nobg .navbar-border {
+  border: none; }
+
+.navbar-default.nobg .navbar-nav > li > a {
+  color: #eee; }
+
+.navbar-default.nobg .navbar-nav > li > a:hover {
+  color: #fff; }
+
+.navbar.nobg a.fa-search {
+  color: #fff; }
+
 /*** LOADER ***/
 .loader {
   -webkit-animation: spin 1.2s linear infinite;
@@ -195,3 +214,23 @@ input[type=search]:focus {
   width: 200px !important;
   opacity: 1;
   cursor: text; }
+
+/*** PROFILE ***/
+#profilediv {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  overflow: hidden; }
+
+#profilediv img {
+  -webkit-filter: brightness(65%); }
+
+#profilecontainer {
+  position: relative;
+  display: block;
+  text-align: center;
+  z-index: 1;
+  background: rgba(64, 64, 64, 0.5);
+  color: #fff; }

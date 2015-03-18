@@ -4,3 +4,19 @@
   <div></div>
   <div></div>
 </div>
+
+{{# redirect}}
+<script>
+  
+  var url = '{{{ redirect }}}';
+
+  $.ajax(url, {
+    type: 'GET',
+    success: function(data) {
+      $('#maindiv').replaceWith(data.html);
+      selected_board = true;
+    }
+  });
+  
+</script>
+{{/ redirect}}

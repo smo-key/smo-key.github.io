@@ -17,6 +17,7 @@ app.engine('html', cons.mustache);
 app.set('view engine', 'html');
 app.set("view options", {layout: false});
 app.set('views', __dirname + '/html');
+mu.root = __dirname + "/html";
 
 //read config
 configdata = fs.readFileSync("config.yml");
@@ -48,6 +49,16 @@ app.use(bodyparser.urlencoded({ extended: true }));
 app.use(bodyparser.json());
 app.use(cookparser());
 
+//send JSON
+function sendjson(json, res)
+{
+  var s = JSON.stringify(json);
+  res.writeHead(200, { 'Content-Type': 'application/json',
+                       'Content-Length': s.length });
+  res.end(s);
+  res.send();
+}
+
 //render SASS
 function renderSass(cb) {
   sass.render({
@@ -69,8 +80,9 @@ renderSass(function() { });
 
 function renderMain(res) {
   res.render('index', {
+    redirect: '/profile',
     partials: {
-      loading: 'loading'
+      container: 'loading'
     }
   });
 }
@@ -83,6 +95,19 @@ app.get('/live', function (req, res) {
 //serve INDEX
 app.get('/', function (req, res) {
   renderMain(res);
+});
+
+//server PAGES
+app.get('/profile', function(req, res) {
+  var s = "";
+  mu.compileAndRender('profile.html', {
+  })
+  .on('data', function(data) {
+    s += data.toString();
+  })
+  .on('end', function() {
+    sendjson({ html: s }, res);
+  });
 });
 
 //serve static files

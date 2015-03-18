@@ -18,12 +18,12 @@
   <body>
     
     <!--  Load CSS -->
-    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
     <link href="/fonts/fonts.css" rel="stylesheet">
     <link href="/css/main.css" rel="stylesheet">
 
     <!-- Navbar - add load class to show load animation -->
-    <nav class="navbar navbar-default navbar-static-top nobg" role="navigation">
+    <nav class="navbar navbar-default navbar-static-top" role="navigation">
       <div class="container">
         <!-- Triple bar icon -->
         <div class="navbar-header">
@@ -60,7 +60,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><form class="navbar-form navbar-right" role="search">
               <div class="form-group">
-                <input type="search" class="form-control" placeholder="Search Blog">
+                <input type="search" class="form-control" placeholder="Search">
                 <a class="fa fa-search" href="#"></a>
               </div>
             </form></li>
@@ -72,12 +72,13 @@
       <div class="navbar-load"></div>
     </nav>
 
-    <div class="container" id="maindiv">
-      {{> container}}
+    <div class="container">
+      {{> loading}}
     </div>
   
   </body>
 
   <script type="text/javascript" src="/js/site.js"></script>
+<!--  <script type="text/javascript" src="http://code.arthurpachachura.com/assets/links-main.js"></script>-->
 
 </html>
