@@ -11,9 +11,10 @@ $col-current-2: #ff6633;
 
 $col-gray-light: #eee;
 $col-gray-xlight: #f8f8f8;
+$col-gray-dark: #222;
 
 body {
-  background-color: $col-gray-xlight;
+  background-color: $col-gray-dark;
   font-family: 'helvetica';
 }
 
@@ -25,6 +26,19 @@ h2 {
 }
 
 .container { overflow: hidden!important; }
+
+/*** MAIN DIV ***/
+#maindiv {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
 
 /*** Navbar ***/
 .navbar {
@@ -167,6 +181,7 @@ a:hover { color: $col-blue-link; }
   margin: 0 auto;
   position: relative;
   width: 50px;
+  z-index: 1;
   
   div {
     border: inherit;
@@ -204,7 +219,9 @@ a:hover { color: $col-blue-link; }
     transform: rotate(360deg);
   }
 }
-
+.invisible {
+  display: none;
+}
 
 /*** SEARCH BOX ***/
 input[type=search] {

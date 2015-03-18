@@ -1,9 +1,11 @@
+<!--
 <br><br>
 <div class="loader">
   <div></div>
   <div></div>
   <div></div>
 </div>
+-->
 
 {{# redirect}}
 <script>
@@ -13,7 +15,7 @@
   $.ajax(url, {
     type: 'GET',
     success: function(data) {
-      $('#maindiv').replaceWith(data.html);
+      $('#maindiv').html(data.html);
       selected_board = true;
     }
   });

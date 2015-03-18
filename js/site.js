@@ -5,6 +5,16 @@ $('.form-group .fa-search').hover(function() {
   $('input[type=search]').focus();
 });
 
+$( window ).load(function() {
+  
+  $('.invisible').map(function() {
+      return this;
+  }).removeClass('invisible');
+  
+//  $('.invisible').get().removeClass('invisible');
+  $('.loader').addClass('invisible');
+});
+
 //window.addEventListener("popstate", function(e) {
 //
 //	// URL location

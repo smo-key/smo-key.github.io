@@ -1,5 +1,5 @@
 body {
-  background-color: #f8f8f8;
+  background-color: #222;
   font-family: 'helvetica'; }
 
 h1 {
@@ -10,6 +10,18 @@ h2 {
 
 .container {
   overflow: hidden !important; }
+
+/*** MAIN DIV ***/
+#maindiv {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%; }
 
 /*** Navbar ***/
 .navbar {
@@ -174,7 +186,8 @@ a:hover {
   height: 50px;
   margin: 0 auto;
   position: relative;
-  width: 50px; }
+  width: 50px;
+  z-index: 1; }
   .loader div {
     border: inherit;
     border-radius: inherit;
@@ -201,6 +214,9 @@ a:hover {
 
   100% {
     transform: rotate(360deg); } }
+
+.invisible {
+  display: none; }
 
 /*** SEARCH BOX ***/
 input[type=search] {
