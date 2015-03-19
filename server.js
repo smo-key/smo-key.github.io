@@ -89,6 +89,7 @@ function renderMain(res) {
 
 //serve LIVE UPDATE
 app.get('/live', function (req, res) {
+  mu.clearCache();
   renderSass(function() { renderMain(res); });
 });
 
