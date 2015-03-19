@@ -14,19 +14,33 @@ $(window).load(function() {
 function changetab(colorclass, url, title) {
   if (!$('#navbaritems .' + colorclass).hasClass('active'))
   {
+    $('.loader').css('opacity', 0);
     $('#maindiv').css('opacity', 0);
     $('#maindiv').css('-webkit-transition', 'none');
-    $('.loader').css('opacity', 1);
+    //$('.loader').css('opacity', 1);
     $.ajax(url, {
       type: 'GET',
       success: function(data) {
         history.pushState({ url: url }, title + " - Arthur Pachachura");
         $('#maindiv').html(data.html);
+
+        //prevent all images from displaying, but load the content
+        $('#maindiv img').map(function() {
+          return this;
+        }).css('opacity', 0);
+        $('#maindiv').css('opacity', 1);
+        $('#maindiv').css('-webkit-transition', 'opacity 1s');
         $('#maindiv').waitForImages(function() {
-          $('#maindiv').css('opacity', 1);
-          $('#maindiv').css('-webkit-transition', 'opacity 1s');
-          $('.loader').css('opacity', 0);
+          //all images have loaded - make sure all have opacity 1
+          $('#maindiv img').map(function() {
+            return this;
+          }).css('opacity', 1);
+        }, function(loaded, count, success) {
+          //individual image loaded
+          $(this).css('opacity', 1);
+          $(this).css('-webkit-transition', 'opacity 1s');
         });
+
       }
     });
   }
@@ -34,6 +48,10 @@ function changetab(colorclass, url, title) {
 
 $('#navbaritems .p').click(function() {
   changetab('p', '/profile', 'Profile');
+});
+
+$('#navbaritems .e').click(function() {
+  changetab('e', '/projects', 'Projects');
 });
 
 $('#navbaritems .c').click(function() {

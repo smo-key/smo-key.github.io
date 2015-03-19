@@ -80,7 +80,7 @@ renderSass(function() { });
 
 function renderMain(res) {
   res.render('index', {
-    redirect: '/contact',
+    redirect: '/projects',
     partials: {
       container: 'loading'
     }
