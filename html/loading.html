@@ -12,12 +12,13 @@
   
   var url = '{{{ redirect }}}';
 
-  $.ajax(url, {
-    type: 'GET',
-    success: function(data) {
-      $('#maindiv').html(data.html);
-      selected_board = true;
-    }
+  $(window).ready(function() {
+    $.ajax(url, {
+      type: 'GET',
+      success: function(data) {
+        $('#maindiv').html(data.html);
+      }
+    });
   });
   
 </script>

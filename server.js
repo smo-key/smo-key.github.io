@@ -42,7 +42,7 @@ app.param(function(name, fn){
   }
 });
 //app.param('id', /^([a-zA-Z0-9]){8}$/);
-app.param('file', /^((?!(\.\.)|(\/)|(\\)).)*$/); //any filename and extension
+//app.param('file', /^((?!(\.\.)|(\/)|(\\)).)*$/); //any filename and extension
 
 //initialize reply parsers
 app.use(bodyparser.urlencoded({ extended: true }));
@@ -80,7 +80,7 @@ renderSass(function() { });
 
 function renderMain(res) {
   res.render('index', {
-    redirect: '/profile',
+    redirect: '/contact',
     partials: {
       container: 'loading'
     }
@@ -98,9 +98,11 @@ app.get('/', function (req, res) {
 });
 
 //server PAGES
-app.get('/profile', function(req, res) {
+app.param('page', /^(profile|projects|contact|blog).*$/); //any page (no extension)
+app.get('/:page', function(req, res) {
   var s = "";
-  mu.compileAndRender('profile.html', {
+  var page = req.params.page[0];
+  mu.compileAndRender(page + '.html', {
   })
   .on('data', function(data) {
     s += data.toString();

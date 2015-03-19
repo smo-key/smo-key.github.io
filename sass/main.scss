@@ -4,10 +4,11 @@ $col-green: #00c100;
 $col-green-link: #009300;
 $col-orange: #ff6633;
 $col-orange-link: #cc5026;
+$col-special: #fff;
+$col-special-link: #3399ff;
 
 $col-current: #3399ff;
-$col-current-1: #00c100;
-$col-current-2: #ff6633;
+$col-current-link: #2375c7;
 
 $col-gray-light: #eee;
 $col-gray-xlight: #f8f8f8;
@@ -38,6 +39,8 @@ h2 {
   margin: 0;
   padding: 0;
   width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 1s;
 }
 
 /*** Navbar ***/
@@ -47,7 +50,7 @@ h2 {
   border: 0;
 }
 .navbar-border {
-  border: 2px solid $col-blue;
+  border: 2px solid $col-current;
   margin: 0 auto;
   position: relative;
   width: 100%;
@@ -119,6 +122,14 @@ h2 {
   color: #fff;
 }
 
+.navbar-nav .w.active,
+.navbar-nav .w.active:hover,
+.navbar-nav .w.active:focus,
+.navbar-nav .w.active:visited {
+  background-color: $col-special;
+  color: #000!important;
+}
+
 button {
   -webkit-transition: background-color 0.2s, color 0.2s;
   transition: background-color 0.2s, color 0.2s;
@@ -134,8 +145,8 @@ button {
 }
 
 /*** Links ***/
-a { color: $col-blue; text-decoration: none; }
-a:hover { color: $col-blue-link; }
+a { color: $col-current; text-decoration: none; }
+a:hover { color: $col-current-link; }
 
 /*** Forms and Buttons ***/
 .form-control, .btn {
@@ -175,13 +186,15 @@ a:hover { color: $col-blue-link; }
 /*** LOADER ***/
 .loader {
   -webkit-animation: spin 1.2s linear infinite;
-  border: 3px solid transparent;
+  -webkit-transition: opacity 0.25s ease-out;
+  border: 4px solid transparent;
   border-radius: 50%;
-  height: 50px;
+  height: 60px;
   margin: 0 auto;
   position: relative;
-  width: 50px;
+  width: 60px;
   z-index: 1;
+  opacity: 1;
   
   div {
     border: inherit;
@@ -218,9 +231,6 @@ a:hover { color: $col-blue-link; }
   100% {
     transform: rotate(360deg);
   }
-}
-.invisible {
-  display: none;
 }
 
 /*** SEARCH BOX ***/

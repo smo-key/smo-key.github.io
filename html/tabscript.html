@@ -1,0 +1,12 @@
+<script>
+  //imports colorclass, color, colorlink
+  $('#navbaritems li a').map(function() {
+      return this;
+  }).removeClass('active');
+  $('#navbaritems .' + colorclass).addClass('active');
+
+  $('.navbar-border').css('border-color', color);
+  $('#maindiv a').css('color', color);
+  $('#maindiv a:hover').css('color', colorlink);
+  $('.form-control:focus, .btn:focus').css('border-color', color);
+</script>

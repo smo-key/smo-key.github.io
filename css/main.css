@@ -21,7 +21,9 @@ h2 {
   display: block;
   margin: 0;
   padding: 0;
-  width: 100%; }
+  width: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 1s; }
 
 /*** Navbar ***/
 .navbar {
@@ -126,6 +128,10 @@ h2 {
   background-color: #ff6633;
   color: #fff; }
 
+.navbar-nav .w.active, .navbar-nav .w.active:hover, .navbar-nav .w.active:focus, .navbar-nav .w.active:visited {
+  background-color: #fff;
+  color: #000 !important; }
+
 button {
   -webkit-transition: background-color 0.2s, color 0.2s;
   transition: background-color 0.2s, color 0.2s; }
@@ -181,13 +187,15 @@ a:hover {
 /*** LOADER ***/
 .loader {
   -webkit-animation: spin 1.2s linear infinite;
-  border: 3px solid transparent;
+  -webkit-transition: opacity 0.25s ease-out;
+  border: 4px solid transparent;
   border-radius: 50%;
-  height: 50px;
+  height: 60px;
   margin: 0 auto;
   position: relative;
-  width: 50px;
-  z-index: 1; }
+  width: 60px;
+  z-index: 1;
+  opacity: 1; }
   .loader div {
     border: inherit;
     border-radius: inherit;
@@ -214,9 +222,6 @@ a:hover {
 
   100% {
     transform: rotate(360deg); } }
-
-.invisible {
-  display: none; }
 
 /*** SEARCH BOX ***/
 input[type=search] {

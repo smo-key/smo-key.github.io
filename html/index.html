@@ -21,6 +21,8 @@
     <link href="/css/bootstrap.css" rel="stylesheet">
     <link href="/fonts/fonts.css" rel="stylesheet">
     <link href="/css/main.css" rel="stylesheet">
+    <script src="/js/resizetoparent.js"></script>
+    <script src="/js/waitforimages.min.js"></script>
 
     <!-- Navbar - add load class to show load animation -->
     <nav class="navbar navbar-default navbar-static-top nobg" role="navigation">
@@ -50,17 +52,18 @@
           <!-- SEARCH - LEFT SIDE - only Desktop size -->
 
           <!-- Left-side items -->
-          <ul class="nav navbar-nav">
+          <ul class="nav navbar-nav" id="navbaritems">
             <li><a href="#" class="p active">Profile</a></li>
             <li><a href="#" class="e">Projects</a></li>
-            <li><a href="#" class="c">Blog</a></li>
+            <li><a href="#" class="c">Contact</a></li>
+            <li><a href="#" class="w">Blog</a></li>
           </ul>
 
           <!-- Right-side items -->
           <ul class="nav navbar-nav navbar-right">
             <li><form class="navbar-form navbar-right" role="search">
               <div class="form-group">
-                <input type="search" class="form-control" placeholder="Search Blog">
+                <input type="search" class="form-control" placeholder="Search Blog" id="searchbar">
                 <a class="fa fa-search" href="#"></a>
               </div>
             </form></li>
@@ -78,7 +81,7 @@
       <div></div>
     </div>
     
-    <div class="container invisible" id="maindiv">
+    <div class="container" id="maindiv">
       {{> container}}
     </div>
   
